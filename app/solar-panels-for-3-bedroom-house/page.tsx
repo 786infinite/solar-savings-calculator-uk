@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import SiteShell from "@/components/SiteShell";
+import FaqSchema from "@/components/FaqSchema";
 export const metadata: Metadata = {
   title: "Solar Panels for a 3-Bedroom House UK | SolarCal",
   description:
@@ -63,6 +64,7 @@ export default function SolarPanelsFor3BedroomHousePage() {
     <SiteShell>
       <main className="min-h-screen bg-slate-950 text-white">
         <article className="mx-auto max-w-5xl px-6 py-16">
+          <FaqSchema faqs={faqs} />
           <a href="/" className="text-sm font-medium text-emerald-300 hover:text-emerald-200">
             ← Back to homepage
           </a>
