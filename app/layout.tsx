@@ -48,10 +48,35 @@ export const metadata: Metadata = {
   },
 };
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "SolarCal",
+  url: "https://solarcal.co.uk",
+  description:
+    "SolarCal is a UK solar savings calculator and home energy guide website.",
+};
+
+const organizationData = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "SolarCal",
+  url: "https://solarcal.co.uk",
+  logo: "https://solarcal.co.uk/icon.svg",
+};
+
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en-GB">
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationData) }}
+        />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-FL26Q4LFP4"
           strategy="afterInteractive"
