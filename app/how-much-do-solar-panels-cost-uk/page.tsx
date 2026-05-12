@@ -1,4 +1,10 @@
+import type { Metadata } from "next";
 import SiteShell from "@/components/SiteShell";
+export const metadata: Metadata = {
+  title: "How Much Do Solar Panels Cost in the UK? | SolarCal",
+  description:
+    "See estimated UK solar panel costs by system size, battery cost impact, price factors, and use SolarCal to estimate solar savings and payback.",
+};
 
 const costRows = [
   {
