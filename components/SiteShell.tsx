@@ -170,6 +170,11 @@ export function FooterLinks() {
                 </a>
               </li>
               <li>
+                <a href="/about" className="hover:text-emerald-300">
+                  About
+                </a>
+              </li>
+              <li>
                 <a href="/contact" className="hover:text-emerald-300">
                   Contact
                 </a>

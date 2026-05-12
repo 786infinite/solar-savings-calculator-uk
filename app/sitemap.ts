@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/cookie-policy",
     "/terms",
     "/contact",
+    "/about",
     "/how-much-do-solar-panels-cost-uk",
     "/are-solar-panels-worth-it-uk",
     "/how-long-do-solar-panels-take-to-pay-for-themselves",
