@@ -1,4 +1,10 @@
+import type { Metadata } from "next";
 import SiteShell from "@/components/SiteShell";
+export const metadata: Metadata = {
+  title: "Is a Solar Battery Worth It in the UK? | SolarCal",
+  description:
+    "Learn when solar battery storage may be worth it, what affects payback, battery cost, self-consumption, EV charging, and solar savings.",
+};
 
 const goodFitFactors = [
   "You use more electricity in the evening",
