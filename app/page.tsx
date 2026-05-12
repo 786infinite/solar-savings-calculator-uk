@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import SiteShell from "@/components/SiteShell";
+
+export const metadata: Metadata = {
+  title: "SolarCal | Solar Savings Calculator UK",
+  description:
+    "Estimate UK solar panel savings, installation costs, payback period, battery benefit, EV charging potential, and compare next steps with SolarCal.",
+};
 
 const popularGuides = [
   {
