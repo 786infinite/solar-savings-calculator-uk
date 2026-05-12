@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import Script from "next/script";
+import CookieNotice from "@/components/CookieNotice";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -51,6 +52,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           src="https://www.googletagmanager.com/gtag/js?id=G-FL26Q4LFP4"
           strategy="afterInteractive"
         />
+
         <Script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
@@ -59,7 +61,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             gtag('config', 'G-FL26Q4LFP4');
           `}
         </Script>
+
         {children}
+
+        <CookieNotice />
       </body>
     </html>
   );
