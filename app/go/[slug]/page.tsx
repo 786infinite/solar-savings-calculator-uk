@@ -1,55 +1,4 @@
-const affiliateLinks: Record<
-  string,
-  {
-    label: string;
-    title: string;
-    description: string;
-    explanation: string;
-    placeholderUrl: string;
-    buttonText: string;
-  }
-> = {
-  "solar-quotes": {
-    label: "Solar quote partner",
-    title: "Compare free solar quotes",
-    description:
-      "This page will later send visitors to an approved UK solar quote partner.",
-    explanation:
-      "For now, this is a placeholder while affiliate and lead-generation partners are being reviewed. Once approved, this page can redirect to a tracked solar quote partner link.",
-    placeholderUrl: "/affiliate-disclosure",
-    buttonText: "Continue",
-  },
-  "solar-battery": {
-    label: "Battery partner",
-    title: "Compare solar battery options",
-    description:
-      "This page will later send visitors to a solar battery quote, retailer, or affiliate partner.",
-    explanation:
-      "Battery recommendations should depend on household usage, solar generation, evening electricity demand, tariff, and product compatibility.",
-    placeholderUrl: "/affiliate-disclosure",
-    buttonText: "Continue",
-  },
-  "ev-charger": {
-    label: "EV charger partner",
-    title: "See recommended EV chargers",
-    description:
-      "This page will later send visitors to an EV charger retailer, installer, or affiliate partner.",
-    explanation:
-      "EV charger recommendations should consider smart charging, solar compatibility, tethered or untethered design, installation cost, and vehicle needs.",
-    placeholderUrl: "/affiliate-disclosure",
-    buttonText: "Continue",
-  },
-  "portable-power": {
-    label: "Portable power partner",
-    title: "See portable power stations",
-    description:
-      "This page will later send visitors to portable power station, solar generator, or product affiliate partners.",
-    explanation:
-      "Portable power products may suit backup power, camping, garden offices, off-grid use, or people who are not ready for a full roof solar installation.",
-    placeholderUrl: "/affiliate-disclosure",
-    buttonText: "Continue",
-  },
-};
+import { affiliateLinks } from "@/lib/affiliateLinks";
 
 export default async function GoPage({
   params,
@@ -112,7 +61,9 @@ export default async function GoPage({
             <div className="grid gap-6 md:grid-cols-[1.2fr_0.8fr]">
               <div>
                 <h2 className="text-2xl font-semibold">
-                  Placeholder partner page
+                  {link.status === "active"
+                    ? "Partner link"
+                    : "Placeholder partner page"}
                 </h2>
 
                 <p className="mt-4 leading-7 text-slate-300">
@@ -127,8 +78,8 @@ export default async function GoPage({
                 </p>
 
                 <p className="mt-4 text-sm leading-6 text-slate-400">
-                  Once affiliate approval is complete, this page can be updated
-                  with the real tracking link.
+                  Partner: {link.partner ?? "Pending"} · Network:{" "}
+                  {link.network ?? "Pending"}
                 </p>
               </div>
 
@@ -142,7 +93,7 @@ export default async function GoPage({
                 </ul>
 
                 <a
-                  href={link.placeholderUrl}
+                  href={link.destinationUrl}
                   className="mt-6 inline-flex w-full justify-center rounded-xl bg-emerald-400 px-6 py-4 font-semibold text-slate-950 hover:bg-emerald-300"
                 >
                   {link.buttonText}
