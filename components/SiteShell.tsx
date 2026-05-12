@@ -12,8 +12,8 @@ export function HeaderLinks() {
   return (
     <header className="border-b border-white/10 bg-slate-950/90 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
-        <a href="/" className="text-lg font-bold tracking-tight">
-          Solar Savings Calculator UK
+        <a href="/" className="text-xl font-bold tracking-tight">
+          SolarCal
         </a>
 
         <nav className="hidden items-center gap-6 text-sm text-slate-300 md:flex">
@@ -21,10 +21,13 @@ export function HeaderLinks() {
             Calculator
           </a>
           <a href="/how-much-do-solar-panels-cost-uk" className="hover:text-emerald-300">
-            Solar Costs
+            Costs
           </a>
           <a href="/are-solar-panels-worth-it-uk" className="hover:text-emerald-300">
             Worth It?
+          </a>
+          <a href="/solar-battery-worth-it" className="hover:text-emerald-300">
+            Batteries
           </a>
           <a href="/best-ev-chargers-uk" className="hover:text-emerald-300">
             EV Chargers
@@ -48,10 +51,11 @@ export function FooterLinks() {
       <div className="mx-auto max-w-6xl px-6 py-10">
         <div className="grid gap-8 md:grid-cols-4">
           <div>
-            <h2 className="font-bold">Solar Savings Calculator UK</h2>
+            <h2 className="font-bold">SolarCal</h2>
             <p className="mt-3 text-sm leading-6 text-slate-400">
-              Estimate solar panel savings, installation cost, payback period,
-              battery benefit, and EV charging potential.
+              UK solar savings calculator and home energy guides. Estimate solar
+              panel savings, installation costs, payback, batteries, and EV
+              charging potential.
             </p>
           </div>
 
@@ -68,6 +72,11 @@ export function FooterLinks() {
                   Calculator methodology
                 </a>
               </li>
+              <li>
+                <a href="/go/solar-quotes" className="hover:text-emerald-300">
+                  Compare solar quotes
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -82,6 +91,11 @@ export function FooterLinks() {
               <li>
                 <a href="/are-solar-panels-worth-it-uk" className="hover:text-emerald-300">
                   Are solar panels worth it?
+                </a>
+              </li>
+              <li>
+                <a href="/how-long-do-solar-panels-take-to-pay-for-themselves" className="hover:text-emerald-300">
+                  Solar payback
                 </a>
               </li>
               <li>
@@ -108,8 +122,33 @@ export function FooterLinks() {
           </div>
 
           <div>
-            <h3 className="font-semibold">Legal</h3>
+            <h3 className="font-semibold">Products & legal</h3>
             <ul className="mt-3 space-y-2 text-sm text-slate-400">
+              <li>
+                <a href="/best-solar-panels-uk" className="hover:text-emerald-300">
+                  Best solar panels UK
+                </a>
+              </li>
+              <li>
+                <a href="/best-solar-batteries-uk" className="hover:text-emerald-300">
+                  Best solar batteries UK
+                </a>
+              </li>
+              <li>
+                <a href="/best-ev-chargers-uk" className="hover:text-emerald-300">
+                  Best EV chargers UK
+                </a>
+              </li>
+              <li>
+                <a href="/best-portable-power-stations-uk" className="hover:text-emerald-300">
+                  Portable power stations
+                </a>
+              </li>
+              <li>
+                <a href="/best-solar-generators-uk" className="hover:text-emerald-300">
+                  Solar generators
+                </a>
+              </li>
               <li>
                 <a href="/affiliate-disclosure" className="hover:text-emerald-300">
                   Affiliate disclosure
@@ -140,10 +179,10 @@ export function FooterLinks() {
         </div>
 
         <p className="mt-10 border-t border-white/10 pt-6 text-sm leading-6 text-slate-500">
-          Calculator results are estimates only. Final costs, savings, payback,
-          export income, and suitability depend on roof survey, location,
-          shading, household usage, tariff, installer pricing, and product
-          choice.
+          SolarCal calculator results are estimates only. Final costs, savings,
+          payback, export income, and suitability depend on roof survey,
+          location, shading, household usage, tariff, installer pricing, and
+          product choice.
         </p>
       </div>
     </footer>
