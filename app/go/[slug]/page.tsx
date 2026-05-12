@@ -1,4 +1,14 @@
+import type { Metadata } from "next";
 import { affiliateLinks } from "@/lib/affiliateLinks";
+
+export const metadata: Metadata = {
+  title: "Partner Link | SolarCal",
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
+
 
 export default async function GoPage({
   params,
