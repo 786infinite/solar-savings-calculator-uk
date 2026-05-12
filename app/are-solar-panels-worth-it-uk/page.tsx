@@ -1,4 +1,10 @@
+import type { Metadata } from "next";
 import SiteShell from "@/components/SiteShell";
+export const metadata: Metadata = {
+  title: "Are Solar Panels Worth It in the UK? | SolarCal",
+  description:
+    "Find out when solar panels may be worth it in the UK, what affects payback, battery storage impact, EV charging benefits, and how to estimate your savings.",
+};
 
 const worthItFactors = [
   "You own the property and can install panels permanently",
