@@ -14,6 +14,7 @@ type Result = {
   paybackHigh: number;
   co2Saved: number;
   recommendation: string;
+  resultSummary: string;
 };
 
 const regionYield: Record<string, number> = {
@@ -138,20 +139,31 @@ export default function SolarSavingsCalculatorPage() {
     const co2Saved = Math.round(annualGeneration * gridCarbonFactor);
 
     let recommendation =
-      "Compare real solar quotes from UK installers to confirm pricing and suitability.";
+      "Compare real solar quotes from UK installers to confirm pricing, roof suitability, and product options.";
+
+    let resultSummary =
+      "Your estimate suggests solar could be worth exploring further, especially if your roof is suitable and your final quote is competitive.";
 
     if (shading === "heavy") {
       recommendation =
         "Your roof may need a proper survey because heavy shading can reduce solar output.";
+      resultSummary =
+        "Your estimate may be more sensitive to roof conditions because heavy shading can reduce generation. A proper installer survey is important.";
     } else if (battery === "yes" || battery === "maybe") {
       recommendation =
         "A solar battery may improve self-consumption, especially if you use more electricity in the evening.";
+      resultSummary =
+        "Because you are interested in battery storage, your next step should compare solar-only and solar-plus-battery options.";
     } else if (ev === "yes") {
       recommendation =
         "Solar panels can pair well with EV charging, especially if you can charge during daylight hours.";
+      resultSummary =
+        "Because you own or plan to buy an EV, solar may be more useful if you can shift some charging to daylight hours.";
     } else if (timeframe === "researching") {
       recommendation =
         "Start by comparing estimated savings and learning about roof suitability before requesting quotes.";
+      resultSummary =
+        "You are still researching, so use this estimate as a starting point before comparing installer quotes.";
     }
 
     const calculatedResult: Result = {
@@ -165,6 +177,7 @@ export default function SolarSavingsCalculatorPage() {
       paybackHigh,
       co2Saved,
       recommendation,
+      resultSummary,
     };
 
     trackEvent("calculator_completed", {
@@ -204,7 +217,7 @@ export default function SolarSavingsCalculatorPage() {
 
   return (
     <main className="min-h-screen bg-slate-950 text-white">
-      <section className="mx-auto max-w-5xl px-6 py-16">
+      <section className="mx-auto max-w-6xl px-6 py-16">
         <a href="/" className="text-sm font-medium text-emerald-300 hover:text-emerald-200">
           ← Back to homepage
         </a>
@@ -214,7 +227,7 @@ export default function SolarSavingsCalculatorPage() {
             Free UK solar calculator
           </p>
 
-          <h1 className="max-w-3xl text-4xl font-bold tracking-tight sm:text-5xl">
+          <h1 className="max-w-4xl text-4xl font-bold tracking-tight sm:text-5xl">
             Solar Savings Calculator UK
           </h1>
 
@@ -226,13 +239,22 @@ export default function SolarSavingsCalculatorPage() {
         </div>
 
         <div className="mt-10 rounded-3xl border border-white/10 bg-white/5 p-6 shadow-2xl">
-          <h2 className="text-2xl font-semibold">Quick estimate</h2>
+          <div className="flex flex-col justify-between gap-4 md:flex-row md:items-end">
+            <div>
+              <h2 className="text-2xl font-semibold">Quick estimate</h2>
+              <p className="mt-2 text-sm leading-6 text-slate-400">
+                These inputs create a rough estimate only. A real quote needs a
+                roof survey and installer assessment.
+              </p>
+            </div>
+
+            <p className="rounded-full border border-white/10 px-4 py-2 text-sm text-slate-300">
+              Takes around 1 minute
+            </p>
+          </div>
 
           <div className="mt-8 grid gap-6 md:grid-cols-2">
-            <div>
-              <label className="block text-sm font-medium text-slate-200">
-                Monthly electricity bill
-              </label>
+            <Field label="Monthly electricity bill">
               <input
                 value={monthlyBill}
                 onChange={(event) => setMonthlyBill(event.target.value)}
@@ -240,12 +262,9 @@ export default function SolarSavingsCalculatorPage() {
                 placeholder="Example: 120"
                 className="mt-2 w-full rounded-xl border border-white/10 bg-slate-900 px-4 py-3 text-white outline-none focus:border-emerald-400"
               />
-            </div>
+            </Field>
 
-            <div>
-              <label className="block text-sm font-medium text-slate-200">
-                Number of bedrooms
-              </label>
+            <Field label="Number of bedrooms">
               <select
                 value={bedrooms}
                 onChange={(event) => setBedrooms(event.target.value)}
@@ -256,12 +275,9 @@ export default function SolarSavingsCalculatorPage() {
                 <option value="4">4 bedrooms</option>
                 <option value="5+">5+ bedrooms</option>
               </select>
-            </div>
+            </Field>
 
-            <div>
-              <label className="block text-sm font-medium text-slate-200">
-                UK region
-              </label>
+            <Field label="UK region">
               <select
                 value={region}
                 onChange={(event) => setRegion(event.target.value)}
@@ -272,12 +288,9 @@ export default function SolarSavingsCalculatorPage() {
                 <option value="north">North England</option>
                 <option value="scotland">Scotland / Northern regions</option>
               </select>
-            </div>
+            </Field>
 
-            <div>
-              <label className="block text-sm font-medium text-slate-200">
-                Roof direction
-              </label>
+            <Field label="Roof direction">
               <select
                 value={roofDirection}
                 onChange={(event) => setRoofDirection(event.target.value)}
@@ -289,12 +302,9 @@ export default function SolarSavingsCalculatorPage() {
                 <option value="north">North</option>
                 <option value="unknown">Not sure</option>
               </select>
-            </div>
+            </Field>
 
-            <div>
-              <label className="block text-sm font-medium text-slate-200">
-                Shading level
-              </label>
+            <Field label="Shading level">
               <select
                 value={shading}
                 onChange={(event) => setShading(event.target.value)}
@@ -305,12 +315,9 @@ export default function SolarSavingsCalculatorPage() {
                 <option value="moderate">Moderate shading</option>
                 <option value="heavy">Heavy shading</option>
               </select>
-            </div>
+            </Field>
 
-            <div>
-              <label className="block text-sm font-medium text-slate-200">
-                Daytime electricity usage
-              </label>
+            <Field label="Daytime electricity usage">
               <select
                 value={daytimeUsage}
                 onChange={(event) => setDaytimeUsage(event.target.value)}
@@ -320,12 +327,9 @@ export default function SolarSavingsCalculatorPage() {
                 <option value="medium">Medium</option>
                 <option value="high">High</option>
               </select>
-            </div>
+            </Field>
 
-            <div>
-              <label className="block text-sm font-medium text-slate-200">
-                Interested in battery storage?
-              </label>
+            <Field label="Interested in battery storage?">
               <select
                 value={battery}
                 onChange={(event) => setBattery(event.target.value)}
@@ -335,12 +339,9 @@ export default function SolarSavingsCalculatorPage() {
                 <option value="yes">Yes</option>
                 <option value="no">No</option>
               </select>
-            </div>
+            </Field>
 
-            <div>
-              <label className="block text-sm font-medium text-slate-200">
-                Own or plan to buy an EV?
-              </label>
+            <Field label="Own or plan to buy an EV?">
               <select
                 value={ev}
                 onChange={(event) => setEv(event.target.value)}
@@ -349,12 +350,9 @@ export default function SolarSavingsCalculatorPage() {
                 <option value="no">No</option>
                 <option value="yes">Yes / planning to</option>
               </select>
-            </div>
+            </Field>
 
-            <div>
-              <label className="block text-sm font-medium text-slate-200">
-                Installation timeframe
-              </label>
+            <Field label="Installation timeframe">
               <select
                 value={timeframe}
                 onChange={(event) => setTimeframe(event.target.value)}
@@ -365,7 +363,7 @@ export default function SolarSavingsCalculatorPage() {
                 <option value="6months">Within 6 months</option>
                 <option value="researching">Just researching</option>
               </select>
-            </div>
+            </Field>
           </div>
 
           <button
@@ -377,88 +375,167 @@ export default function SolarSavingsCalculatorPage() {
         </div>
 
         {result && (
-          <div className="mt-10 rounded-3xl border border-emerald-400/20 bg-emerald-400/10 p-6">
-            <h2 className="text-2xl font-bold">Your estimated result</h2>
+          <div className="mt-10 overflow-hidden rounded-3xl border border-emerald-400/20 bg-slate-900 shadow-2xl">
+            <div className="border-b border-white/10 bg-emerald-400/10 p-6">
+              <p className="inline-flex rounded-full border border-emerald-400/30 bg-emerald-400/10 px-4 py-2 text-sm font-medium text-emerald-300">
+                Your estimated result
+              </p>
 
-            <div className="mt-6 grid gap-4 md:grid-cols-2">
-              <ResultCard
-                label="Estimated annual usage"
-                value={`${result.annualUsage.toLocaleString()} kWh`}
-              />
-              <ResultCard
-                label="Estimated system size"
-                value={`${result.systemSize} kW`}
-              />
-              <ResultCard
-                label="Estimated annual generation"
-                value={`${result.annualGeneration.toLocaleString()} kWh`}
-              />
-              <ResultCard
-                label="Estimated installation cost"
-                value={`£${result.installCostLow.toLocaleString()} - £${result.installCostHigh.toLocaleString()}`}
-              />
-              <ResultCard
-                label="Estimated annual benefit"
-                value={`£${result.annualSavings.toLocaleString()}`}
-              />
-              <ResultCard
-                label="Estimated payback period"
-                value={`${result.paybackLow} - ${result.paybackHigh} years`}
-              />
-              <ResultCard
-                label="Estimated CO2 saving"
-                value={`${result.co2Saved.toLocaleString()} kg/year`}
-              />
-              <ResultCard
-                label="Recommended next step"
-                value={result.recommendation}
-              />
+              <div className="mt-5 grid gap-6 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
+                <div>
+                  <h2 className="text-3xl font-bold">
+                    Estimated annual benefit: £
+                    {result.annualSavings.toLocaleString()}
+                  </h2>
+
+                  <p className="mt-4 max-w-3xl leading-7 text-slate-300">
+                    {result.resultSummary}
+                  </p>
+                </div>
+
+                <div className="rounded-2xl border border-emerald-400/20 bg-slate-950 p-5">
+                  <p className="text-sm text-slate-400">
+                    Estimated payback range
+                  </p>
+                  <p className="mt-2 text-3xl font-bold text-emerald-300">
+                    {result.paybackLow} - {result.paybackHigh} years
+                  </p>
+                  <p className="mt-2 text-sm leading-6 text-slate-400">
+                    Based on simplified assumptions and your answers.
+                  </p>
+                </div>
+              </div>
             </div>
 
-            <div className="mt-8 grid gap-4 md:grid-cols-2">
-              <AffiliateCard
-                title="Compare solar quotes"
-                description="Check real pricing from UK installers."
-                href="/go/solar-quotes"
-                onClick={trackQuoteClick}
-              />
+            <div className="p-6">
+              <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+                <ResultCard
+                  label="Estimated system size"
+                  value={`${result.systemSize} kW`}
+                />
+                <ResultCard
+                  label="Annual generation"
+                  value={`${result.annualGeneration.toLocaleString()} kWh`}
+                />
+                <ResultCard
+                  label="Installation cost"
+                  value={`£${result.installCostLow.toLocaleString()} - £${result.installCostHigh.toLocaleString()}`}
+                />
+                <ResultCard
+                  label="CO2 saving"
+                  value={`${result.co2Saved.toLocaleString()} kg/year`}
+                />
+              </div>
 
-              <AffiliateCard
-                title="Compare solar batteries"
-                description="Useful if you use electricity in the evening."
-                href="/go/solar-battery"
-                onClick={() =>
-                  trackAffiliateClick("solar-battery", "solar-battery")
-                }
-              />
+              <div className="mt-6 grid gap-4 md:grid-cols-2">
+                <ResultCard
+                  label="Estimated annual electricity usage"
+                  value={`${result.annualUsage.toLocaleString()} kWh`}
+                />
+                <ResultCard
+                  label="Recommended next step"
+                  value={result.recommendation}
+                />
+              </div>
 
-              <AffiliateCard
-                title="See EV chargers"
-                description="For EV owners or people planning to buy one."
-                href="/go/ev-charger"
-                onClick={() => trackAffiliateClick("ev-charger", "ev-charger")}
-              />
+              <div className="mt-8 rounded-3xl border border-emerald-400/20 bg-emerald-400/10 p-6">
+                <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
+                  <div>
+                    <h2 className="text-2xl font-bold">
+                      Ready to compare real solar quotes?
+                    </h2>
+                    <p className="mt-3 leading-7 text-slate-300">
+                      Your estimate is a starting point. A quote partner or
+                      installer can check your roof, product options, battery
+                      suitability, and final pricing.
+                    </p>
 
-              <AffiliateCard
-                title="Portable power stations"
-                description="Backup and off-grid solar options."
-                href="/go/portable-power"
-                onClick={() =>
-                  trackAffiliateClick("portable-power", "portable-power")
-                }
-              />
+                    <ul className="mt-4 space-y-2 text-sm text-slate-300">
+                      <li>• No manual sales calls from this website</li>
+                      <li>• Partner handles quote, survey, and installation</li>
+                      <li>• Final price depends on your property and products</li>
+                    </ul>
+                  </div>
+
+                  <a
+                    href="/go/solar-quotes"
+                    onClick={trackQuoteClick}
+                    className="inline-flex justify-center rounded-xl bg-emerald-400 px-6 py-4 text-center font-semibold text-slate-950 hover:bg-emerald-300"
+                  >
+                    Compare free solar quotes
+                  </a>
+                </div>
+              </div>
+
+              <div className="mt-8">
+                <h2 className="text-2xl font-bold">Other options to consider</h2>
+                <p className="mt-3 max-w-3xl leading-7 text-slate-300">
+                  These are secondary options based on your answers. The main
+                  next step for installation pricing is still comparing solar
+                  quotes.
+                </p>
+
+                <div className="mt-5 grid gap-4 md:grid-cols-3">
+                  <AffiliateCard
+                    title="Compare solar batteries"
+                    description="Useful if you use more electricity in the evening or want to increase self-consumption."
+                    href="/go/solar-battery"
+                    onClick={() =>
+                      trackAffiliateClick("solar-battery", "solar-battery")
+                    }
+                  />
+
+                  <AffiliateCard
+                    title="See EV chargers"
+                    description="Useful if you own or plan to buy an EV and want smarter home charging."
+                    href="/go/ev-charger"
+                    onClick={() =>
+                      trackAffiliateClick("ev-charger", "ev-charger")
+                    }
+                  />
+
+                  <AffiliateCard
+                    title="Portable power stations"
+                    description="For backup power, camping, off-grid use, or smaller solar setups."
+                    href="/go/portable-power"
+                    onClick={() =>
+                      trackAffiliateClick("portable-power", "portable-power")
+                    }
+                  />
+                </div>
+              </div>
+
+              <div className="mt-8 rounded-2xl border border-white/10 bg-slate-950 p-5">
+                <h2 className="text-xl font-semibold">Important estimate note</h2>
+                <p className="mt-3 text-sm leading-6 text-slate-400">
+                  Results are estimates only. They are not formal quotes,
+                  guarantees, financial advice, or survey results. Final costs,
+                  savings, export income, payback period, roof suitability, and
+                  system performance depend on survey results, location,
+                  shading, household usage, tariff, installer pricing, future
+                  energy prices, and product choice.
+                </p>
+              </div>
             </div>
           </div>
         )}
-
-        <p className="mt-8 text-sm leading-6 text-slate-400">
-          Results are estimates only. Final costs, savings, export income, roof
-          suitability, and payback period depend on survey results, location,
-          shading, household usage, tariff, installer pricing, and product
-          choice.
-        </p>
       </section>
     </main>
+  );
+}
+
+function Field({
+  label,
+  children,
+}: {
+  label: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <label className="block text-sm font-medium text-slate-200">
+      {label}
+      {children}
+    </label>
   );
 }
 
@@ -483,14 +560,14 @@ function AffiliateCard({
   onClick: () => void;
 }) {
   return (
-    <div className="rounded-2xl bg-slate-950 p-6">
-      <h3 className="text-xl font-semibold">{title}</h3>
-      <p className="mt-3 text-slate-300">{description}</p>
+    <div className="rounded-2xl border border-white/10 bg-slate-950 p-5">
+      <h3 className="text-lg font-semibold">{title}</h3>
+      <p className="mt-3 text-sm leading-6 text-slate-300">{description}</p>
 
       <a
         href={href}
         onClick={onClick}
-        className="mt-5 inline-flex rounded-xl bg-emerald-400 px-6 py-4 font-semibold text-slate-950 hover:bg-emerald-300"
+        className="mt-5 inline-flex rounded-xl bg-emerald-400 px-5 py-3 text-sm font-semibold text-slate-950 hover:bg-emerald-300"
       >
         Continue
       </a>
