@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://solar-savings-calculator-uk.vercel.app/sitemap.xml",
+    sitemap: "https://solarcal.co.uk/sitemap.xml",
   };
 }

@@ -5,7 +5,7 @@ import CookieNotice from "@/components/CookieNotice";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://solar-savings-calculator-uk.vercel.app"),
+  metadataBase: new URL("https://solarcal.co.uk"),
   title: {
     default: "Solar Savings Calculator UK | Estimate Solar Panel Savings",
     template: "%s | Solar Savings Calculator UK",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     title: "Solar Savings Calculator UK",
     description:
       "Estimate solar panel savings, installation cost, payback period, battery benefit, and EV charging potential for UK homes.",
-    url: "https://solar-savings-calculator-uk.vercel.app",
+    url: "https://solarcal.co.uk",
     siteName: "Solar Savings Calculator UK",
     type: "website",
     locale: "en_GB",

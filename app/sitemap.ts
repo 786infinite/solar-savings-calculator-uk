@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const baseUrl = "https://solar-savings-calculator-uk.vercel.app";
+const baseUrl = "https://solarcal.co.uk";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const pages = [
