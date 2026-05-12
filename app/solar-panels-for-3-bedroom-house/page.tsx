@@ -1,4 +1,10 @@
+import type { Metadata } from "next";
 import SiteShell from "@/components/SiteShell";
+export const metadata: Metadata = {
+  title: "Solar Panels for a 3-Bedroom House UK | SolarCal",
+  description:
+    "Estimate solar panel system size, cost, savings, battery storage benefit, and payback for a 3-bedroom house in the UK.",
+};
 
 const quickStats = [
   {
