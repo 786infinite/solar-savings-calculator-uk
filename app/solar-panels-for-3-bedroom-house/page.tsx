@@ -98,6 +98,10 @@ export default function SolarPanelsFor3BedroomHousePage() {
                 Compare free solar quotes
               </a>
             </div>
+          
+            <p className="mt-4 text-sm text-slate-400">
+              Last updated: May 2026
+            </p>
           </header>
 
           <section className="mt-12 grid gap-4 md:grid-cols-4">

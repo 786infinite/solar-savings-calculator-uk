@@ -111,6 +111,10 @@ export default function SolarPanelsAndEVChargingPage() {
                 View EV charger guide
               </a>
             </div>
+          
+            <p className="mt-4 text-sm text-slate-400">
+              Last updated: May 2026
+            </p>
           </header>
 
           <section className="mt-12 rounded-3xl border border-emerald-400/20 bg-emerald-400/10 p-6">
