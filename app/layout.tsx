@@ -20,9 +20,13 @@ export const metadata: Metadata = {
     "EV charger cost calculator UK",
     "solar panels UK",
   ],
-  verification: {
-    google: "G-izENxozElAETAL4YXWtDSvnFR__pavQRQRd2s-DPs",
-  },
+ verification: {
+   google: [
+     "G-izENxozElAETAL4YXWtDSvnFR__pavQRQRd2s-DPs",
+     "FvaF7FwMEaE42s-i8CZc_JB6m91F79ABRCspVociBNg",
+  ],
+},
+  
   openGraph: {
     title: "Solar Savings Calculator UK",
     description:
