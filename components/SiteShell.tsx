@@ -1,5 +1,13 @@
 import type { ReactNode } from "react";
 
+export function BackHome() {
+  return (
+    <a href="/" className="text-sm font-medium text-emerald-300 hover:text-emerald-200">
+      ← Back to homepage
+    </a>
+  );
+}
+
 export function HeaderLinks() {
   return (
     <header className="border-b border-white/10 bg-slate-950/90 backdrop-blur">
@@ -86,6 +94,16 @@ export function FooterLinks() {
                   4-bedroom house solar
                 </a>
               </li>
+              <li>
+                <a href="/solar-battery-worth-it" className="hover:text-emerald-300">
+                  Solar battery worth it?
+                </a>
+              </li>
+              <li>
+                <a href="/solar-panels-and-ev-charging" className="hover:text-emerald-300">
+                  Solar panels and EV charging
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -132,7 +150,37 @@ export function FooterLinks() {
   );
 }
 
-export default function SiteShell({ children }: { children: ReactNode }) {
+export function LegalCard({
+  label = "Legal",
+  title,
+  children,
+}: {
+  label?: string;
+  title: string;
+  children: ReactNode;
+}) {
+  return (
+    <main className="min-h-screen bg-slate-950 text-white">
+      <section className="mx-auto max-w-4xl px-6 py-16">
+        <BackHome />
+
+        <div className="mt-8 rounded-3xl border border-white/10 bg-white/5 p-8">
+          <p className="mb-4 inline-flex rounded-full border border-emerald-400/30 bg-emerald-400/10 px-4 py-2 text-sm font-medium text-emerald-300">
+            {label}
+          </p>
+
+          <h1 className="text-4xl font-bold">{title}</h1>
+
+          <div className="mt-6 space-y-6 text-lg leading-8 text-slate-300">
+            {children}
+          </div>
+        </div>
+      </section>
+    </main>
+  );
+}
+
+export function SiteShell({ children }: { children: ReactNode }) {
   return (
     <div className="min-h-screen bg-slate-950 text-white">
       <HeaderLinks />
@@ -141,3 +189,5 @@ export default function SiteShell({ children }: { children: ReactNode }) {
     </div>
   );
 }
+
+export default SiteShell;
