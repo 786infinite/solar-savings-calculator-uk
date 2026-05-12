@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import SiteShell from "@/components/SiteShell";
+
+export const metadata: Metadata = {
+  title: "Best EV Chargers UK | SolarCal",
+  description: "Compare EV charger types, smart charging features, solar compatibility, tethered vs untethered chargers, installation cost, and home charging options.",
+};
+
 
 const chargerTypes = [
   {

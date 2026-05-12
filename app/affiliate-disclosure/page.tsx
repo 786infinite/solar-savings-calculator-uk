@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import { LegalCard } from "@/components/SiteShell";
+
+export const metadata: Metadata = {
+  title: "Affiliate Disclosure | SolarCal",
+  description: "Read how SolarCal may earn affiliate commission, referral fees, or lead payments from solar quote partners, product links, and home energy partners.",
+};
+
 
 export default function AffiliateDisclosurePage() {
   return (

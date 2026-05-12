@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import SiteShell from "@/components/SiteShell";
+
+export const metadata: Metadata = {
+  title: "Solar Panels and EV Charging UK | SolarCal",
+  description: "Learn how solar panels can work with EV charging, smart chargers, battery storage, daytime charging, and how to estimate solar and EV savings.",
+};
+
 
 const benefits = [
   "Solar can reduce how much grid electricity you use for home charging",

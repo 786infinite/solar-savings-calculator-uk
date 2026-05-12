@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import { LegalCard } from "@/components/SiteShell";
+
+export const metadata: Metadata = {
+  title: "Terms of Use | SolarCal",
+  description: "Read the SolarCal terms of use for calculator estimates, website content, affiliate links, third-party partners, disclaimers, and user responsibility.",
+};
+
 
 export default function TermsPage() {
   return (

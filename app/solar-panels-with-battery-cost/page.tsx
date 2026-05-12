@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import SiteShell from "@/components/SiteShell";
+
+export const metadata: Metadata = {
+  title: "Solar Panels with Battery Cost UK | SolarCal",
+  description: "Understand solar panels with battery cost in the UK, what affects battery pricing, payback, self-consumption, and whether solar plus storage makes sense.",
+};
+
 
 const costRows = [
   {

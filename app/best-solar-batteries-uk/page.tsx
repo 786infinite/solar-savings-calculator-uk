@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import SiteShell from "@/components/SiteShell";
+
+export const metadata: Metadata = {
+  title: "Best Solar Batteries UK | SolarCal",
+  description: "Compare solar battery capacity, usable storage, warranty, inverter compatibility, smart tariff features, EV charging, and battery payback factors.",
+};
+
 
 const batteryTypes = [
   {

@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import SiteShell from "@/components/SiteShell";
+
+export const metadata: Metadata = {
+  title: "How Long Do Solar Panels Take to Pay for Themselves? | SolarCal",
+  description: "Understand solar panel payback in the UK, what affects payback time, installation cost, export income, self-consumption, batteries, and savings.",
+};
+
 
 const paybackFactors = [
   "Solar installation cost",

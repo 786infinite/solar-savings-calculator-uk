@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import { LegalCard } from "@/components/SiteShell";
+
+export const metadata: Metadata = {
+  title: "Contact SolarCal",
+  description: "Contact SolarCal for website feedback, content corrections, affiliate enquiries, partnership enquiries, or technical issues with the solar calculator.",
+};
+
 
 export default function ContactPage() {
   return (

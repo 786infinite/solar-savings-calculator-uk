@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import { LegalCard } from "@/components/SiteShell";
+
+export const metadata: Metadata = {
+  title: "Cookie Policy | SolarCal",
+  description: "Read the SolarCal cookie policy covering analytics cookies, affiliate tracking, cookie notice choices, third-party cookies, and browser controls.",
+};
+
 
 export default function CookiePolicyPage() {
   return (

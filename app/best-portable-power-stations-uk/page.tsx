@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import SiteShell from "@/components/SiteShell";
+
+export const metadata: Metadata = {
+  title: "Best Portable Power Stations UK | SolarCal",
+  description: "Compare portable power stations for home backup, camping, garden offices, off-grid use, solar charging, battery capacity, and output power.",
+};
+
 
 const useCases = [
   {

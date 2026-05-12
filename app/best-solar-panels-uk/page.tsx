@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import SiteShell from "@/components/SiteShell";
+
+export const metadata: Metadata = {
+  title: "Best Solar Panels UK | SolarCal",
+  description: "Compare solar panel types, efficiency, warranties, installation quality, roof suitability, batteries, EV charging, and how to choose solar panels.",
+};
+
 
 const panelTypes = [
   {

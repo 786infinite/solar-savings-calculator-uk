@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import SiteShell from "@/components/SiteShell";
+
+export const metadata: Metadata = {
+  title: "Best Solar Generators UK | SolarCal",
+  description: "Compare solar generators for camping, backup power, off-grid use, portable solar charging, battery capacity, output power, and home energy backup.",
+};
+
 
 const generatorTypes = [
   {
