@@ -12,8 +12,11 @@ export function HeaderLinks() {
   return (
     <header className="border-b border-white/10 bg-slate-950/90 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
-        <a href="/" className="text-xl font-bold tracking-tight">
-          SolarCal
+        <a href="/" className="flex items-center gap-3 text-xl font-bold tracking-tight">
+          <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-400 text-sm font-black text-slate-950">
+            SC
+          </span>
+          <span>SolarCal</span>
         </a>
 
         <nav className="hidden items-center gap-6 text-sm text-slate-300 md:flex">
