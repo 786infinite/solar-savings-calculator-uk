@@ -57,13 +57,13 @@ export const affiliateLinks: Record<string, AffiliateLink> = {
     label: "Portable power partner",
     title: "See portable power stations",
     description:
-      "This page will later send visitors to portable power station, solar generator, or product affiliate partners.",
+      "This page sends visitors to portable power station and solar generator product options.",
     explanation:
-      "Portable power products may suit backup power, camping, off-grid use, or people who are not ready for a full roof solar installation.",
-    destinationUrl: "/affiliate-disclosure",
-    buttonText: "Continue",
-    status: "placeholder",
-    network: "Pending",
-    partner: "Pending portable power partner",
+      "Portable power products may suit backup power, camping, off-grid use, or people who are not ready for a full roof solar installation. SolarCal may earn commission from qualifying purchases.",
+    destinationUrl: "https://amzn.to/3Rc6MGc",
+    buttonText: "View portable power options",
+    status: "active",
+    network: "Amazon Associates UK",
+    partner: "Amazon UK",
   },
 };
