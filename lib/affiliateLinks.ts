@@ -66,4 +66,18 @@ export const affiliateLinks: Record<string, AffiliateLink> = {
     network: "Amazon Associates UK",
     partner: "Amazon UK",
   },
+
+  "solar-generators": {
+    label: "Solar generator partner",
+    title: "See solar generator options",
+    description:
+      "This page sends visitors to solar generator and portable solar power product options.",
+    explanation:
+      "Solar generators may suit camping, backup power, off-grid use, garden offices, and portable solar charging. SolarCal may earn commission from qualifying purchases.",
+    destinationUrl: "https://amzn.to/4dMsg4j",
+    buttonText: "View solar generator options",
+    status: "active",
+    network: "Amazon Associates UK",
+    partner: "Amazon UK",
+  },
 };
