@@ -81,6 +81,20 @@ export const affiliateLinks: Record<string, AffiliateLink> = {
     partner: "Amazon UK",
   },
 
+  "allpowers": {
+    label: "ALLPOWERS partner",
+    title: "View ALLPOWERS portable power products",
+    description:
+      "This page sends visitors to ALLPOWERS UK portable power station, solar generator, and solar panel product options.",
+    explanation:
+      "ALLPOWERS products may suit backup power, camping, off-grid charging, portable solar, and solar generator use. SolarCal may earn commission from qualifying purchases.",
+    destinationUrl: "https://uk.iallpowers.com/?ref=gvijmdgm&utm_source=aff",
+    buttonText: "View ALLPOWERS products",
+    status: "active",
+    network: "GoAffPro",
+    partner: "ALLPOWERS UK",
+  },
+
   "solar-generators": {
     label: "Solar generator partner",
     title: "See solar generator options",
