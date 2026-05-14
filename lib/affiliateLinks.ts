@@ -53,6 +53,20 @@ export const affiliateLinks: Record<string, AffiliateLink> = {
     partner: "Pending EV charger partner",
   },
 
+  "ev-accessories": {
+    label: "EV accessories partner",
+    title: "See EV charger accessories",
+    description:
+      "This page sends visitors to EV charger cable and accessory product options.",
+    explanation:
+      "EV charging accessories may include Type 2 charging cables, adapters, cable storage, and related home charging accessories. SolarCal may earn commission from qualifying purchases.",
+    destinationUrl: "https://amzn.to/4uNvU4H",
+    buttonText: "View EV accessories",
+    status: "active",
+    network: "Amazon Associates UK",
+    partner: "Amazon UK",
+  },
+
   "portable-power": {
     label: "Portable power partner",
     title: "See portable power stations",

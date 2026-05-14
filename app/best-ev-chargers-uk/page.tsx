@@ -278,10 +278,10 @@ export default function BestEVChargersUKPage() {
 
             <div className="mt-6 flex flex-col gap-4 sm:flex-row">
               <a
-                href="/go/ev-charger"
+                href="/go/ev-accessories"
                 className="rounded-xl bg-emerald-400 px-6 py-4 text-center font-semibold text-slate-950 hover:bg-emerald-300"
               >
-                See EV charger options
+                See EV charger accessories
               </a>
 
               <a
