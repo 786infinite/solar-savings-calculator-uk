@@ -326,7 +326,110 @@ export default function BestPortablePowerStationsUKPage() {
             </div>
           </section>
 
-          <section className="mt-12">
+          
+          <section className="mt-12 rounded-3xl border border-white/10 bg-white/5 p-6">
+            <h2 className="text-3xl font-bold">
+              Need portable power or roof solar?
+            </h2>
+
+            <p className="mt-4 max-w-3xl leading-7 text-slate-300">
+              Portable power stations can be useful for backup, camping, and
+              off-grid charging. If you own your home and want to reduce energy
+              bills long term, also compare fixed roof solar using the SolarCal
+              calculator and free guide.
+            </p>
+
+            <div className="mt-6 flex flex-col gap-4 sm:flex-row">
+              <a
+                href="/free-solar-guide"
+                className="rounded-xl bg-emerald-400 px-6 py-4 text-center font-semibold text-slate-950 hover:bg-emerald-300"
+              >
+                Download the free guide
+              </a>
+
+              <a
+                href="https://payhip.com/b/BMvmN"
+                className="rounded-xl border border-white/15 px-6 py-4 text-center font-semibold text-white hover:bg-white/10"
+              >
+                View the Buyer’s Pack
+              </a>
+            </div>
+          </section>
+
+          <section className="mt-12 rounded-3xl border border-emerald-400/20 bg-emerald-400/10 p-6">
+            <h2 className="text-3xl font-bold">
+              Compare portable power partners
+            </h2>
+
+            <p className="mt-4 max-w-3xl leading-7 text-slate-300">
+              Compare portable power stations, solar generator bundles, and
+              portable solar options through SolarCal partner routes.
+            </p>
+
+            <div className="mt-6 flex flex-col gap-4 sm:flex-row">
+              <a
+                href="/go/portable-power"
+                className="rounded-xl bg-emerald-400 px-6 py-4 text-center font-semibold text-slate-950 hover:bg-emerald-300"
+              >
+                See portable power options
+              </a>
+
+              <a
+                href="/go/allpowers"
+                className="rounded-xl border border-white/15 px-6 py-4 text-center font-semibold text-white hover:bg-white/10"
+              >
+                View ALLPOWERS products
+              </a>
+            </div>
+          </section>
+
+          <section className="mt-12 rounded-2xl border border-white/10 bg-slate-900 p-6">
+            <h2 className="text-2xl font-bold">Sources and further reading</h2>
+
+            <p className="mt-4 text-sm leading-6 text-slate-400">
+              These links can help you understand solar panels, electrical
+              safety, product comparison, and SolarCal’s methodology.
+            </p>
+
+            <ul className="mt-5 space-y-3 text-sm text-slate-300">
+              <li>
+                <a
+                  href="https://energysavingtrust.org.uk/advice/solar-panels/"
+                  className="text-emerald-300 hover:text-emerald-200"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Energy Saving Trust: Solar panels
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/best-solar-generators-uk"
+                  className="text-emerald-300 hover:text-emerald-200"
+                >
+                  SolarCal: Solar generator guide
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/affiliate-disclosure"
+                  className="text-emerald-300 hover:text-emerald-200"
+                >
+                  SolarCal affiliate disclosure
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/calculator-methodology"
+                  className="text-emerald-300 hover:text-emerald-200"
+                >
+                  SolarCal calculator methodology
+                </a>
+              </li>
+            </ul>
+          </section>
+
+<section className="mt-12">
             <h2 className="text-3xl font-bold">Frequently asked questions</h2>
 
             <div className="mt-6 space-y-4">
