@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import SiteShell from "@/components/SiteShell";
 import FaqSchema from "@/components/FaqSchema";
+
 export const metadata: Metadata = {
   title: "Are Solar Panels Worth It in the UK? | SolarCal",
   description:
@@ -8,32 +9,145 @@ export const metadata: Metadata = {
 };
 
 const worthItFactors = [
-  "You own the property and can install panels permanently",
-  "Your roof gets good sunlight and has limited shading",
-  "Your electricity bills are medium to high",
-  "You use electricity during the day or can shift usage to daylight hours",
-  "You plan to stay in the property long enough to benefit from savings",
-  "You may add a battery, EV charger, or smart tariff later",
+  {
+    title: "You have a suitable roof",
+    description:
+      "Solar panels are more likely to make sense if your roof has enough space, good sunlight, limited shading, and is in suitable condition.",
+  },
+  {
+    title: "Your electricity bills are medium to high",
+    description:
+      "Higher electricity usage can make solar more valuable because you may save more by using your own generated electricity.",
+  },
+  {
+    title: "You use electricity during the day",
+    description:
+      "Solar savings are usually stronger when you use more electricity while the panels are generating, rather than exporting most of it.",
+  },
+  {
+    title: "You plan to stay in the property",
+    description:
+      "Solar panels can take years to pay back, so they are often more attractive if you expect to stay long enough to benefit from the savings.",
+  },
+  {
+    title: "You can compare strong quotes",
+    description:
+      "A competitive quote with good equipment, warranty, and aftercare can make solar more attractive than a high-priced quote with unclear details.",
+  },
+  {
+    title: "You may add a battery or EV charger",
+    description:
+      "Battery storage or daytime EV charging can increase self-consumption, but the extra cost needs to be compared carefully.",
+  },
 ];
 
 const lessSuitableFactors = [
-  "Your roof is heavily shaded for much of the day",
-  "Your roof is very small, complex, or in poor condition",
-  "You rent the property and cannot get permission",
-  "Your electricity usage is very low",
-  "You expect to move home soon",
-  "The quote is too expensive compared with the expected annual benefit",
+  {
+    title: "Heavy shading",
+    description:
+      "Trees, nearby buildings, chimneys, dormers, or roof obstructions can reduce generation and make the financial return weaker.",
+  },
+  {
+    title: "Very low electricity usage",
+    description:
+      "If your electricity usage is low, your bill savings may not be high enough to justify a larger installation.",
+  },
+  {
+    title: "You may move soon",
+    description:
+      "If you expect to move before the system has time to pay back, the return may be less attractive.",
+  },
+  {
+    title: "Your roof needs work first",
+    description:
+      "If the roof needs repairs, replacement, or major access work, it may be better to fix that before installing solar panels.",
+  },
+  {
+    title: "The quote is too expensive",
+    description:
+      "A high quote can lengthen the payback period, even if the property is otherwise suitable for solar.",
+  },
+  {
+    title: "You cannot get permission",
+    description:
+      "Renters, leaseholders, listed buildings, or some flats may need permission before solar panels can be installed.",
+  },
 ];
 
 const paybackFactors = [
-  "Installation cost",
-  "System size",
-  "Electricity unit rate",
-  "Export payment rate",
-  "How much solar electricity you use yourself",
-  "Roof direction and shading",
-  "Whether you add battery storage",
-  "Future electricity prices",
+  {
+    title: "Installation cost",
+    description:
+      "A lower-quality cheap quote is not always best, but a fair and competitive installation cost helps improve payback.",
+  },
+  {
+    title: "System size",
+    description:
+      "The system needs to match your roof and usage. Bigger is not always better if you export too much electricity.",
+  },
+  {
+    title: "Electricity unit rate",
+    description:
+      "Higher import electricity prices can make solar savings more valuable because every self-used kWh avoids buying electricity from the grid.",
+  },
+  {
+    title: "Export payment rate",
+    description:
+      "Export payments can add value, but exported electricity is usually worth less than electricity you use yourself.",
+  },
+  {
+    title: "Self-consumption",
+    description:
+      "The more solar electricity you use at home, the better the savings usually are.",
+  },
+  {
+    title: "Roof direction and shading",
+    description:
+      "South-facing, east-west, and shaded roofs can all perform differently, which affects payback.",
+  },
+  {
+    title: "Battery storage",
+    description:
+      "A battery may increase self-consumption, but it also adds cost. The payback impact depends on usage and tariff.",
+  },
+  {
+    title: "Future energy prices",
+    description:
+      "Future electricity prices are uncertain, so solar payback should be treated as an estimate rather than a promise.",
+  },
+];
+
+const comparisonRows = [
+  {
+    situation: "Good roof, high daytime usage",
+    likelyOutcome: "Often more attractive",
+    reason:
+      "The home can use more solar electricity directly, which usually improves savings.",
+  },
+  {
+    situation: "Good roof, low daytime usage",
+    likelyOutcome: "May still be worth checking",
+    reason:
+      "Export income helps, but self-consumption may be lower unless usage is shifted or a battery is added.",
+  },
+  {
+    situation: "Heavy shading",
+    likelyOutcome: "Needs careful survey",
+    reason:
+      "Shading can reduce output and may weaken the financial case.",
+  },
+  {
+    situation: "Solar plus battery",
+    likelyOutcome: "Depends on usage and price",
+    reason:
+      "A battery can improve self-consumption, but the extra cost can extend payback.",
+  },
+  {
+    situation: "EV at home during the day",
+    likelyOutcome: "Can be attractive",
+    reason:
+      "Daytime EV charging can help use more solar generation at home.",
+  },
 ];
 
 const faqs = [
@@ -53,9 +167,19 @@ const faqs = [
       "Yes, solar panels can still generate electricity in cloudy conditions, but output is lower than in direct sunlight. Location, roof angle, shading, and system size all affect generation.",
   },
   {
+    question: "How long do solar panels take to pay for themselves?",
+    answer:
+      "The payback period can vary widely depending on installation cost, electricity usage, export tariff, roof suitability, battery choice, and future electricity prices. Use a calculator estimate and compare real quotes before deciding.",
+  },
+  {
+    question: "Are solar panels worth it with an EV?",
+    answer:
+      "Solar panels can be more attractive if you have an EV and can charge during daylight hours. If most charging happens overnight, the benefit may depend more on battery storage or smart tariffs.",
+  },
+  {
     question: "Should I get quotes before deciding?",
     answer:
-      "Yes. A calculator can give a useful estimate, but installer quotes are needed to confirm roof suitability, system design, equipment, final price, and expected generation.",
+      "Yes. A calculator can give a useful estimate, but installer quotes are needed to confirm roof suitability, system design, equipment, final price, warranty, and expected generation.",
   },
 ];
 
@@ -65,7 +189,11 @@ export default function AreSolarPanelsWorthItUKPage() {
       <main className="min-h-screen bg-slate-950 text-white">
         <article className="mx-auto max-w-5xl px-6 py-16">
           <FaqSchema faqs={faqs} />
-          <a href="/" className="text-sm font-medium text-emerald-300 hover:text-emerald-200">
+
+          <a
+            href="/"
+            className="text-sm font-medium text-emerald-300 hover:text-emerald-200"
+          >
             ← Back to homepage
           </a>
 
@@ -82,7 +210,8 @@ export default function AreSolarPanelsWorthItUKPage() {
               Solar panels can be worth it for many UK homeowners, especially if
               you have a suitable roof, reasonable electricity usage, and a
               competitive installation quote. The real answer depends on your
-              property, usage, tariff, and expected payback period.
+              property, usage, tariff, battery choice, and expected payback
+              period.
             </p>
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
@@ -94,13 +223,13 @@ export default function AreSolarPanelsWorthItUKPage() {
               </a>
 
               <a
-                href="/go/solar-quotes"
-                className="rounded-xl border border-white/15 px-6 py-4 text-center font-semibold text-white hover:bg-white/10"
+                href="/free-solar-guide"
+                className="rounded-xl border border-emerald-400/30 bg-emerald-400/10 px-6 py-4 text-center font-semibold text-emerald-300 hover:bg-emerald-400/20"
               >
-                Compare free solar quotes
+                Download the free solar guide
               </a>
             </div>
-          
+
             <p className="mt-4 text-sm text-slate-400">
               Last updated: May 2026
             </p>
@@ -120,39 +249,63 @@ export default function AreSolarPanelsWorthItUKPage() {
             <p className="mt-4 leading-7 text-slate-300">
               The safest approach is to estimate your savings first, then
               compare real quotes so you can judge the upfront cost against the
-              expected yearly benefit.
+              expected yearly benefit, warranty, product quality, and aftercare.
             </p>
           </section>
 
-          <section className="mt-12 grid gap-6 md:grid-cols-2">
-            <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
-              <h2 className="text-2xl font-bold">
-                When solar panels are more likely to be worth it
-              </h2>
+          <section className="mt-12">
+            <h2 className="text-3xl font-bold">
+              When are solar panels worth it?
+            </h2>
 
-              <ul className="mt-5 space-y-3 text-slate-300">
-                {worthItFactors.map((factor) => (
-                  <li key={factor} className="flex gap-3">
-                    <span className="mt-1 text-emerald-300">✓</span>
-                    <span>{factor}</span>
-                  </li>
-                ))}
-              </ul>
+            <p className="mt-4 max-w-3xl leading-7 text-slate-300">
+              Solar panels tend to be more worthwhile when the system is matched
+              properly to the home. The best results usually come from a
+              suitable roof, sensible system size, good self-consumption, and a
+              fair installation quote.
+            </p>
+
+            <div className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+              {worthItFactors.map((factor) => (
+                <div
+                  key={factor.title}
+                  className="rounded-2xl border border-white/10 bg-white/5 p-5"
+                >
+                  <h3 className="flex gap-3 text-lg font-semibold">
+                    <span className="text-emerald-300">✓</span>
+                    <span>{factor.title}</span>
+                  </h3>
+                  <p className="mt-3 text-sm leading-6 text-slate-300">
+                    {factor.description}
+                  </p>
+                </div>
+              ))}
             </div>
+          </section>
 
-            <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
-              <h2 className="text-2xl font-bold">
-                When solar panels may be less suitable
-              </h2>
+          <section className="mt-12">
+            <h2 className="text-3xl font-bold">
+              When might solar panels be less suitable?
+            </h2>
 
-              <ul className="mt-5 space-y-3 text-slate-300">
-                {lessSuitableFactors.map((factor) => (
-                  <li key={factor} className="flex gap-3">
-                    <span className="mt-1 text-red-300">•</span>
-                    <span>{factor}</span>
-                  </li>
-                ))}
-              </ul>
+            <p className="mt-4 max-w-3xl leading-7 text-slate-300">
+              Solar is not automatically right for every home. If output is
+              likely to be low or the quote is too expensive, the payback period
+              can become less attractive.
+            </p>
+
+            <div className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+              {lessSuitableFactors.map((factor) => (
+                <div
+                  key={factor.title}
+                  className="rounded-2xl border border-white/10 bg-white/5 p-5"
+                >
+                  <h3 className="text-lg font-semibold">{factor.title}</h3>
+                  <p className="mt-3 text-sm leading-6 text-slate-300">
+                    {factor.description}
+                  </p>
+                </div>
+              ))}
             </div>
           </section>
 
@@ -164,19 +317,82 @@ export default function AreSolarPanelsWorthItUKPage() {
             <p className="mt-4 max-w-3xl leading-7 text-slate-300">
               Solar value is not just about the cost of panels. The return
               depends on how much electricity the system generates, how much you
-              use at home, and how much you are paid for exported electricity.
+              use at home, how much you export, and how much you pay for the
+              installation.
             </p>
 
             <div className="mt-6 grid gap-4 md:grid-cols-2">
               {paybackFactors.map((factor) => (
                 <div
-                  key={factor}
+                  key={factor.title}
                   className="rounded-2xl border border-white/10 bg-white/5 p-5"
                 >
-                  <p className="text-slate-300">{factor}</p>
+                  <h3 className="text-lg font-semibold">{factor.title}</h3>
+                  <p className="mt-3 text-sm leading-6 text-slate-300">
+                    {factor.description}
+                  </p>
                 </div>
               ))}
             </div>
+          </section>
+
+          <section className="mt-12">
+            <h2 className="text-3xl font-bold">
+              Solar worth-it examples
+            </h2>
+
+            <p className="mt-4 max-w-3xl leading-7 text-slate-300">
+              These examples show how different situations can affect whether
+              solar panels may be financially attractive. They are not rules,
+              but they help explain why quotes and payback periods vary.
+            </p>
+
+            <div className="mt-6 overflow-hidden rounded-2xl border border-white/10">
+              <table className="w-full border-collapse text-left text-sm">
+                <thead className="bg-white/10 text-slate-200">
+                  <tr>
+                    <th className="p-4 font-semibold">Situation</th>
+                    <th className="p-4 font-semibold">Likely outcome</th>
+                    <th className="p-4 font-semibold">Why it matters</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {comparisonRows.map((row) => (
+                    <tr key={row.situation} className="border-t border-white/10">
+                      <td className="p-4 font-medium text-white">
+                        {row.situation}
+                      </td>
+                      <td className="p-4 font-semibold text-emerald-300">
+                        {row.likelyOutcome}
+                      </td>
+                      <td className="p-4 text-slate-300">{row.reason}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section className="mt-12 rounded-3xl border border-white/10 bg-white/5 p-6">
+            <h2 className="text-3xl font-bold">
+              Are solar panels worth it without a battery?
+            </h2>
+
+            <p className="mt-4 leading-7 text-slate-300">
+              Solar panels can still be worth it without a battery. A battery is
+              not required for a solar system to reduce electricity bills. The
+              key question is how much of your solar electricity you can use
+              while it is being generated.
+            </p>
+
+            <p className="mt-4 leading-7 text-slate-300">
+              Without a battery, surplus electricity is usually exported. That
+              can still provide value, but export payments are usually lower
+              than the value of electricity you use directly at home. If you are
+              home during the day, work from home, run appliances in daylight
+              hours, or charge an EV during the day, solar-only may still be
+              useful.
+            </p>
           </section>
 
           <section className="mt-12 rounded-3xl border border-white/10 bg-white/5 p-6">
@@ -228,8 +444,8 @@ export default function AreSolarPanelsWorthItUKPage() {
 
             <p className="mt-4 leading-7 text-slate-300">
               If you mainly charge overnight, solar may still help overall home
-              electricity usage, but the direct EV charging benefit may be
-              lower unless you combine it with battery storage or smart charging
+              electricity usage, but the direct EV charging benefit may be lower
+              unless you combine it with battery storage or smart charging
               strategies.
             </p>
 
@@ -256,9 +472,9 @@ export default function AreSolarPanelsWorthItUKPage() {
             </h2>
 
             <p className="mt-4 max-w-3xl leading-7 text-slate-300">
-              Use the calculator to estimate system size, annual savings,
-              installation cost range, payback period, battery benefit, and EV
-              charging potential.
+              Use the SolarCal calculator to estimate system size, annual
+              savings, installation cost range, payback period, battery benefit,
+              and EV charging potential.
             </p>
 
             <div className="mt-6 flex flex-col gap-4 sm:flex-row">
@@ -270,10 +486,40 @@ export default function AreSolarPanelsWorthItUKPage() {
               </a>
 
               <a
-                href="/go/solar-quotes"
+                href="/free-solar-guide"
                 className="rounded-xl border border-white/15 px-6 py-4 text-center font-semibold text-white hover:bg-white/10"
               >
-                Compare free solar quotes
+                Download the free solar guide
+              </a>
+            </div>
+          </section>
+
+          <section className="mt-12 rounded-3xl border border-white/10 bg-white/5 p-6">
+            <h2 className="text-3xl font-bold">
+              Planning to buy solar soon?
+            </h2>
+
+            <p className="mt-4 max-w-3xl leading-7 text-slate-300">
+              The free SolarCal guide helps you understand savings, quote
+              comparison, payback periods, and common buying mistakes. If you
+              want a more detailed checklist before choosing an installer, the
+              Buyer’s Pack gives you extra quote comparison help and practical
+              questions to ask.
+            </p>
+
+            <div className="mt-6 flex flex-col gap-4 sm:flex-row">
+              <a
+                href="/free-solar-guide"
+                className="rounded-xl bg-emerald-400 px-6 py-4 text-center font-semibold text-slate-950 hover:bg-emerald-300"
+              >
+                Download the free guide
+              </a>
+
+              <a
+                href="https://payhip.com/b/BMvmN"
+                className="rounded-xl border border-white/15 px-6 py-4 text-center font-semibold text-white hover:bg-white/10"
+              >
+                View the Buyer’s Pack
               </a>
             </div>
           </section>
@@ -294,6 +540,57 @@ export default function AreSolarPanelsWorthItUKPage() {
                 </div>
               ))}
             </div>
+          </section>
+
+          <section className="mt-12 rounded-2xl border border-white/10 bg-slate-900 p-6">
+            <h2 className="text-2xl font-bold">Sources and further reading</h2>
+
+            <p className="mt-4 text-sm leading-6 text-slate-400">
+              These links can help you understand UK solar panels, installation
+              standards, export payments, and consumer guidance. Always check
+              current details before making a buying decision.
+            </p>
+
+            <ul className="mt-5 space-y-3 text-sm text-slate-300">
+              <li>
+                <a
+                  href="https://energysavingtrust.org.uk/advice/solar-panels/"
+                  className="text-emerald-300 hover:text-emerald-200"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Energy Saving Trust: Solar panels
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://mcscertified.com/"
+                  className="text-emerald-300 hover:text-emerald-200"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  MCS: Certified low-carbon products and installers
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.ofgem.gov.uk/environmental-and-social-schemes/smart-export-guarantee-seg"
+                  className="text-emerald-300 hover:text-emerald-200"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Ofgem: Smart Export Guarantee
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/calculator-methodology"
+                  className="text-emerald-300 hover:text-emerald-200"
+                >
+                  SolarCal calculator methodology
+                </a>
+              </li>
+            </ul>
           </section>
 
           <section className="mt-12 rounded-2xl border border-white/10 bg-slate-900 p-6">
