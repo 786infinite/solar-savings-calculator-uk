@@ -71,6 +71,11 @@ export function FooterLinks() {
                 </a>
               </li>
               <li>
+                <a href="/free-solar-guide" className="hover:text-emerald-300">
+                  Free solar guide
+                </a>
+              </li>
+              <li>
                 <a href="/calculator-methodology" className="hover:text-emerald-300">
                   Calculator methodology
                 </a>

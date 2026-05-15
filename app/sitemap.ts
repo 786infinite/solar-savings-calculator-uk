@@ -6,6 +6,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const pages = [
     "",
     "/solar-savings-calculator",
+    "/free-solar-guide",
     "/calculator-methodology",
     "/affiliate-disclosure",
     "/privacy-policy",
