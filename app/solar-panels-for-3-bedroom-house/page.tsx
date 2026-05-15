@@ -320,7 +320,88 @@ export default function SolarPanelsFor3BedroomHousePage() {
             </div>
           </section>
 
-          <section className="mt-12">
+          
+          <section className="mt-12 rounded-3xl border border-white/10 bg-white/5 p-6">
+            <h2 className="text-3xl font-bold">
+              Planning solar for a 3-bedroom house?
+            </h2>
+
+            <p className="mt-4 max-w-3xl leading-7 text-slate-300">
+              The free SolarCal guide helps you understand solar savings,
+              quote comparison, payback periods, battery storage, EV charging,
+              and common buying mistakes. If you want a more detailed checklist
+              before choosing an installer, the Buyer’s Pack gives you extra
+              quote comparison help and practical questions to ask.
+            </p>
+
+            <div className="mt-6 flex flex-col gap-4 sm:flex-row">
+              <a
+                href="/free-solar-guide"
+                className="rounded-xl bg-emerald-400 px-6 py-4 text-center font-semibold text-slate-950 hover:bg-emerald-300"
+              >
+                Download the free guide
+              </a>
+
+              <a
+                href="https://payhip.com/b/BMvmN"
+                className="rounded-xl border border-white/15 px-6 py-4 text-center font-semibold text-white hover:bg-white/10"
+              >
+                View the Buyer’s Pack
+              </a>
+            </div>
+          </section>
+
+          <section className="mt-12 rounded-2xl border border-white/10 bg-slate-900 p-6">
+            <h2 className="text-2xl font-bold">Sources and further reading</h2>
+
+            <p className="mt-4 text-sm leading-6 text-slate-400">
+              These links can help you understand UK solar panels, installer
+              certification, export payments, and SolarCal’s estimate method.
+            </p>
+
+            <ul className="mt-5 space-y-3 text-sm text-slate-300">
+              <li>
+                <a
+                  href="https://energysavingtrust.org.uk/advice/solar-panels/"
+                  className="text-emerald-300 hover:text-emerald-200"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Energy Saving Trust: Solar panels
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://mcscertified.com/"
+                  className="text-emerald-300 hover:text-emerald-200"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  MCS: Certified low-carbon products and installers
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.ofgem.gov.uk/environmental-and-social-schemes/smart-export-guarantee-seg"
+                  className="text-emerald-300 hover:text-emerald-200"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Ofgem: Smart Export Guarantee
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/calculator-methodology"
+                  className="text-emerald-300 hover:text-emerald-200"
+                >
+                  SolarCal calculator methodology
+                </a>
+              </li>
+            </ul>
+          </section>
+
+<section className="mt-12">
             <h2 className="text-3xl font-bold">Frequently asked questions</h2>
 
             <div className="mt-6 space-y-4">
