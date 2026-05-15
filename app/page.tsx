@@ -96,6 +96,13 @@ export default function HomePage() {
             >
               Learn about UK solar costs
             </a>
+
+            <a
+              href="/free-solar-guide"
+              className="rounded-xl border border-emerald-400/30 bg-emerald-400/10 px-8 py-4 font-semibold text-emerald-300 hover:bg-emerald-400/20"
+            >
+              Download the free solar guide
+            </a>
           </div>
 
           <div className="mt-16 grid gap-6 text-left md:grid-cols-3">
