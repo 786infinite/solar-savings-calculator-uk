@@ -4,9 +4,9 @@ import FaqSchema from "@/components/FaqSchema";
 
 export const metadata: Metadata = {
   title: "Best Solar Batteries UK | SolarCal",
-  description: "Compare solar battery capacity, usable storage, warranty, inverter compatibility, smart tariff features, EV charging, and battery payback factors.",
+  description:
+    "Compare solar battery capacity, usable storage, warranty, inverter compatibility, smart tariff features, EV charging, and battery payback factors.",
 };
-
 
 const batteryTypes = [
   {
@@ -73,7 +73,11 @@ export default function BestSolarBatteriesUKPage() {
       <main className="min-h-screen bg-slate-950 text-white">
         <article className="mx-auto max-w-5xl px-6 py-16">
           <FaqSchema faqs={faqs} />
-          <a href="/" className="text-sm font-medium text-emerald-300 hover:text-emerald-200">
+
+          <a
+            href="/"
+            className="text-sm font-medium text-emerald-300 hover:text-emerald-200"
+          >
             ← Back to homepage
           </a>
 
@@ -102,13 +106,13 @@ export default function BestSolarBatteriesUKPage() {
               </a>
 
               <a
-                href="/go/solar-battery"
+                href="/solar-battery-worth-it"
                 className="rounded-xl border border-white/15 px-6 py-4 text-center font-semibold text-white hover:bg-white/10"
               >
-                Compare battery options
+                Is a battery worth it?
               </a>
             </div>
-          
+
             <p className="mt-4 text-sm text-slate-400">
               Last updated: May 2026
             </p>
@@ -205,9 +209,7 @@ export default function BestSolarBatteriesUKPage() {
           </section>
 
           <section className="mt-12 rounded-3xl border border-white/10 bg-white/5 p-6">
-            <h2 className="text-3xl font-bold">
-              Solar battery compatibility
-            </h2>
+            <h2 className="text-3xl font-bold">Solar battery compatibility</h2>
 
             <p className="mt-4 leading-7 text-slate-300">
               Not every battery works with every solar setup. Compatibility with
@@ -259,32 +261,66 @@ export default function BestSolarBatteriesUKPage() {
 
           <section className="mt-12 rounded-3xl border border-emerald-400/20 bg-emerald-400/10 p-6">
             <h2 className="text-3xl font-bold">
-              Compare solar battery options
+              Estimate solar battery value first
             </h2>
 
             <p className="mt-4 max-w-3xl leading-7 text-slate-300">
-              This section will later link to approved solar battery partners,
-              quote partners, or product affiliates.
+              Before buying a battery, use the calculator to estimate system
+              size, yearly benefit, payback range, and whether battery storage
+              may improve self-consumption for your home.
             </p>
 
             <div className="mt-6 flex flex-col gap-4 sm:flex-row">
               <a
-                href="/go/solar-battery"
+                href="/solar-savings-calculator"
                 className="rounded-xl bg-emerald-400 px-6 py-4 text-center font-semibold text-slate-950 hover:bg-emerald-300"
               >
-                Compare battery options
+                Estimate battery benefit
               </a>
 
               <a
-                href="/solar-savings-calculator"
+                href="/solar-panels-with-battery-cost"
                 className="rounded-xl border border-white/15 px-6 py-4 text-center font-semibold text-white hover:bg-white/10"
               >
-                Estimate savings first
+                Solar panels with battery cost
               </a>
             </div>
           </section>
 
-          
+          <section className="mt-12 rounded-3xl border border-white/10 bg-white/5 p-6">
+            <h2 className="text-3xl font-bold">
+              View solar batteries and products at Sunstore
+            </h2>
+
+            <p className="mt-4 max-w-3xl leading-7 text-slate-300">
+              If you are researching solar batteries, inverters, solar panel
+              kits, charge controllers, or off-grid solar equipment, Sunstore is
+              one solar product supplier you can compare. This is separate from
+              getting a full home installation quote.
+            </p>
+
+            <p className="mt-4 text-sm leading-6 text-slate-400">
+              SolarCal may earn commission or referral income if you continue
+              through this partner link.
+            </p>
+
+            <div className="mt-6 flex flex-col gap-4 sm:flex-row">
+              <a
+                href="/go/sunstore"
+                className="rounded-xl bg-emerald-400 px-6 py-4 text-center font-semibold text-slate-950 hover:bg-emerald-300"
+              >
+                View Sunstore solar products
+              </a>
+
+              <a
+                href="/affiliate-disclosure"
+                className="rounded-xl border border-white/15 px-6 py-4 text-center font-semibold text-white hover:bg-white/10"
+              >
+                Read affiliate disclosure
+              </a>
+            </div>
+          </section>
+
           <section className="mt-12 rounded-3xl border border-white/10 bg-white/5 p-6">
             <h2 className="text-3xl font-bold">
               Planning to choose a solar battery?
@@ -366,7 +402,7 @@ export default function BestSolarBatteriesUKPage() {
             </ul>
           </section>
 
-<section className="mt-12">
+          <section className="mt-12">
             <h2 className="text-3xl font-bold">Frequently asked questions</h2>
 
             <div className="mt-6 space-y-4">
