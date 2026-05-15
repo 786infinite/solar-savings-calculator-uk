@@ -200,6 +200,13 @@ export default function HomePage() {
             </p>
 
             <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+              <a
+                href="/free-solar-guide"
+                className="rounded-2xl border border-emerald-400/30 bg-emerald-400/10 p-5 font-semibold text-emerald-300 hover:bg-emerald-400 hover:text-slate-950"
+              >
+                Free Solar Guide + Buyer’s Pack
+              </a>
+
               {productGuides.map((guide) => (
                 <a
                   key={guide.href}
@@ -209,6 +216,34 @@ export default function HomePage() {
                   {guide.title}
                 </a>
               ))}
+            </div>
+
+            <div className="mt-8 rounded-3xl border border-emerald-400/20 bg-emerald-400/10 p-6">
+              <h3 className="text-2xl font-bold">
+                Planning to buy solar soon?
+              </h3>
+
+              <p className="mt-3 max-w-3xl leading-7 text-slate-300">
+                Download the free guide first, then upgrade to the full Buyer’s
+                Pack if you want extra quote comparison help, installer
+                questions, and buying checklists before choosing a supplier.
+              </p>
+
+              <div className="mt-6 flex flex-col gap-4 sm:flex-row">
+                <a
+                  href="/free-solar-guide"
+                  className="rounded-xl bg-emerald-400 px-6 py-4 text-center font-semibold text-slate-950 hover:bg-emerald-300"
+                >
+                  Download the free guide
+                </a>
+
+                <a
+                  href="https://payhip.com/b/BMvmN"
+                  className="rounded-xl border border-white/15 px-6 py-4 text-center font-semibold text-white hover:bg-white/10"
+                >
+                  View the Buyer’s Pack
+                </a>
+              </div>
             </div>
           </div>
         </section>
