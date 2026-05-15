@@ -95,6 +95,14 @@ export function FooterLinks() {
               </li>
               <li>
                 <a
+                  href="https://payhip.com/b/BMvmN"
+                  className="hover:text-emerald-300"
+                >
+                  Buyer’s Pack
+                </a>
+              </li>
+              <li>
+                <a
                   href="/calculator-methodology"
                   className="hover:text-emerald-300"
                 >
