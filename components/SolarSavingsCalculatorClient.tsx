@@ -706,9 +706,7 @@ export default function SolarSavingsCalculatorPage() {
         </section>
 
         <section className="mt-10 rounded-3xl border border-white/10 bg-white/5 p-8">
-          <h2 className="text-3xl font-bold">
-            Solar calculator FAQs
-          </h2>
+          <h2 className="text-3xl font-bold">Solar calculator FAQs</h2>
 
           <div className="mt-8 space-y-5">
             <FaqItem question="Is this solar calculator a formal quote?">
@@ -737,9 +735,10 @@ export default function SolarSavingsCalculatorPage() {
             </FaqItem>
 
             <FaqItem question="What should I do after getting my estimate?">
-              Use the estimate as a starting point, read the free guide, compare
-              more than one quote, check warranties, ask about roof suitability,
-              and make sure the installer explains the products clearly.
+              Use the estimate as a starting point, download the free SolarCal
+              guide, compare more than one quote, check warranties, ask about
+              roof suitability, and use the Buyer’s Pack if you want a more
+              detailed checklist before choosing an installer.
             </FaqItem>
           </div>
 
