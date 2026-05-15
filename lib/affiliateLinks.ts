@@ -25,6 +25,20 @@ export const affiliateLinks: Record<string, AffiliateLink> = {
     partner: "Pending solar quote partner",
   },
 
+  "solar-products": {
+    label: "Solar product partner",
+    title: "View solar panels, kits, batteries, and off-grid products",
+    description:
+      "This page sends visitors to Sunstore Solar product options, including solar panels, batteries, solar kits, off-grid power, and related solar equipment.",
+    explanation:
+      "Sunstore Solar sells solar products, kits, batteries, inverters, off-grid systems, and related solar equipment. SolarCal may earn commission if visitors buy through this link.",
+    destinationUrl: "https://www.sunstore.co.uk/?aff=SolarCal",
+    buttonText: "View Sunstore solar products",
+    status: "active",
+    network: "Direct",
+    partner: "Sunstore Solar",
+  },
+
   "solar-battery": {
     label: "Battery partner",
     title: "Compare solar battery options",
