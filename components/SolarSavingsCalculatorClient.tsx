@@ -1,7 +1,7 @@
 "use client";
 
 import Script from "next/script";
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import { trackEvent } from "@/lib/analytics";
 
 type Result = {
@@ -571,6 +571,194 @@ export default function SolarSavingsCalculatorPage() {
             </div>
           </div>
         )}
+
+        <section className="mt-14 rounded-3xl border border-white/10 bg-white/5 p-8">
+          <p className="inline-flex rounded-full border border-emerald-400/30 bg-emerald-400/10 px-4 py-2 text-sm font-medium text-emerald-300">
+            How the calculator works
+          </p>
+
+          <h2 className="mt-5 text-3xl font-bold">
+            How SolarCal estimates your solar savings
+          </h2>
+
+          <p className="mt-4 max-w-4xl leading-7 text-slate-300">
+            SolarCal uses your monthly electricity bill, home size, region, roof
+            direction, shading, daytime usage, battery interest, and EV plans to
+            create a simple UK solar estimate. The result is not a formal quote,
+            but it helps you understand whether solar panels may be worth
+            exploring before speaking to installers.
+          </p>
+
+          <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            <SeoCard
+              title="1. Electricity usage"
+              description="Your monthly bill is converted into a rough annual electricity usage estimate. Higher usage normally means a larger solar system may be useful."
+            />
+
+            <SeoCard
+              title="2. System size"
+              description="The calculator estimates a likely solar panel system size based on your usage and home size, then keeps it within a sensible range."
+            />
+
+            <SeoCard
+              title="3. Solar generation"
+              description="Estimated annual generation is adjusted for UK region, roof direction, and shading because these can affect solar output."
+            />
+
+            <SeoCard
+              title="4. Self-consumption"
+              description="Solar savings are higher when you use more of your own solar electricity at home instead of exporting it."
+            />
+
+            <SeoCard
+              title="5. Battery and EV impact"
+              description="Battery storage and daytime EV charging can increase the amount of solar electricity you use yourself."
+            />
+
+            <SeoCard
+              title="6. Payback estimate"
+              description="The payback range compares estimated installation costs against estimated annual benefit from bill savings and export income."
+            />
+          </div>
+        </section>
+
+        <section className="mt-10 grid gap-6 lg:grid-cols-2">
+          <div className="rounded-3xl border border-white/10 bg-slate-900 p-8">
+            <h2 className="text-3xl font-bold">
+              What affects solar panel savings?
+            </h2>
+
+            <p className="mt-4 leading-7 text-slate-300">
+              Solar savings vary from home to home. A south-facing roof with low
+              shading and good daytime electricity usage will usually perform
+              better than a shaded roof where most electricity is used at night.
+              Your tariff, export rate, battery choice, EV charging habits, and
+              final installer quote also make a big difference.
+            </p>
+
+            <ul className="mt-5 space-y-3 text-sm leading-6 text-slate-300">
+              <li>• Roof direction and angle</li>
+              <li>• Shading from trees, chimneys, buildings, or dormers</li>
+              <li>• How much electricity you use during daylight hours</li>
+              <li>• Whether you add battery storage</li>
+              <li>• Whether you charge an EV at home</li>
+              <li>• Export tariff and electricity import tariff</li>
+              <li>• Final installer pricing and product choice</li>
+            </ul>
+          </div>
+
+          <div className="rounded-3xl border border-white/10 bg-slate-900 p-8">
+            <h2 className="text-3xl font-bold">
+              Why your payback period may vary
+            </h2>
+
+            <p className="mt-4 leading-7 text-slate-300">
+              A solar payback period is only an estimate. The same solar system
+              can pay back faster for one home than another because electricity
+              usage, export income, battery use, roof suitability, and upfront
+              installation cost can all be different.
+            </p>
+
+            <p className="mt-4 leading-7 text-slate-300">
+              The calculator gives a useful starting range, but you should still
+              compare installer quotes and check the exact products, warranty,
+              roof survey, scaffolding needs, battery compatibility, and
+              aftercare before buying.
+            </p>
+          </div>
+        </section>
+
+        <section className="mt-10 rounded-3xl border border-emerald-400/20 bg-emerald-400/10 p-8">
+          <h2 className="text-3xl font-bold">
+            Should you add a solar battery or EV charger?
+          </h2>
+
+          <p className="mt-4 max-w-4xl leading-7 text-slate-300">
+            A solar battery may help if you use a lot of electricity in the
+            evening, want to store more of your solar generation, or have a
+            tariff that makes stored electricity useful. An EV charger may work
+            well with solar if you can charge your car during daylight hours or
+            use smart charging features.
+          </p>
+
+          <div className="mt-8 grid gap-4 md:grid-cols-3">
+            <a
+              href="/solar-battery-worth-it"
+              className="rounded-2xl border border-white/10 bg-slate-950 p-5 font-semibold hover:bg-emerald-400 hover:text-slate-950"
+            >
+              Is a solar battery worth it?
+            </a>
+
+            <a
+              href="/solar-panels-with-battery-cost"
+              className="rounded-2xl border border-white/10 bg-slate-950 p-5 font-semibold hover:bg-emerald-400 hover:text-slate-950"
+            >
+              Solar panels with battery cost
+            </a>
+
+            <a
+              href="/solar-panels-and-ev-charging"
+              className="rounded-2xl border border-white/10 bg-slate-950 p-5 font-semibold hover:bg-emerald-400 hover:text-slate-950"
+            >
+              Solar panels and EV charging
+            </a>
+          </div>
+        </section>
+
+        <section className="mt-10 rounded-3xl border border-white/10 bg-white/5 p-8">
+          <h2 className="text-3xl font-bold">
+            Solar calculator FAQs
+          </h2>
+
+          <div className="mt-8 space-y-5">
+            <FaqItem question="Is this solar calculator a formal quote?">
+              No. SolarCal gives an estimate only. A formal quote needs a roof
+              survey, product selection, installer pricing, scaffolding details,
+              electrical checks, and property-specific assessment.
+            </FaqItem>
+
+            <FaqItem question="How accurate is the estimated solar saving?">
+              It is a useful starting point, not a guarantee. Actual savings
+              depend on electricity usage, roof conditions, shading, tariffs,
+              export rates, system performance, battery use, and final
+              installation cost.
+            </FaqItem>
+
+            <FaqItem question="Does a solar battery always improve payback?">
+              Not always. A battery can increase self-consumption, but it also
+              adds upfront cost. It may be more useful for homes with higher
+              evening usage or tariffs that reward storing and shifting energy.
+            </FaqItem>
+
+            <FaqItem question="Can solar panels help with EV charging?">
+              Yes, especially if the car can be charged during daylight hours.
+              If most charging happens at night, a battery or smart tariff may
+              matter more.
+            </FaqItem>
+
+            <FaqItem question="What should I do after getting my estimate?">
+              Use the estimate as a starting point, read the free guide, compare
+              more than one quote, check warranties, ask about roof suitability,
+              and make sure the installer explains the products clearly.
+            </FaqItem>
+          </div>
+
+          <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+            <a
+              href="/free-solar-guide"
+              className="rounded-xl bg-emerald-400 px-6 py-4 text-center font-semibold text-slate-950 hover:bg-emerald-300"
+            >
+              Download the free solar guide
+            </a>
+
+            <a
+              href="/calculator-methodology"
+              className="rounded-xl border border-white/15 px-6 py-4 text-center font-semibold text-white hover:bg-white/10"
+            >
+              View calculator methodology
+            </a>
+          </div>
+        </section>
       </section>
     </main>
   );
@@ -581,7 +769,7 @@ function Field({
   children,
 }: {
   label: string;
-  children: React.ReactNode;
+  children: ReactNode;
 }) {
   return (
     <label className="block text-sm font-medium text-slate-200">
@@ -623,6 +811,36 @@ function AffiliateCard({
       >
         Continue
       </a>
+    </div>
+  );
+}
+
+function SeoCard({
+  title,
+  description,
+}: {
+  title: string;
+  description: string;
+}) {
+  return (
+    <div className="rounded-2xl border border-white/10 bg-slate-950 p-5">
+      <h3 className="text-lg font-semibold">{title}</h3>
+      <p className="mt-3 text-sm leading-6 text-slate-300">{description}</p>
+    </div>
+  );
+}
+
+function FaqItem({
+  question,
+  children,
+}: {
+  question: string;
+  children: ReactNode;
+}) {
+  return (
+    <div className="rounded-2xl border border-white/10 bg-slate-950 p-5">
+      <h3 className="text-lg font-semibold">{question}</h3>
+      <p className="mt-3 text-sm leading-6 text-slate-300">{children}</p>
     </div>
   );
 }
