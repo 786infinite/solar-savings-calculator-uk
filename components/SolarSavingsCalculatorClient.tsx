@@ -1,5 +1,6 @@
 "use client";
 
+import Script from "next/script";
 import { useState } from "react";
 import { trackEvent } from "@/lib/analytics";
 
@@ -207,6 +208,13 @@ export default function SolarSavingsCalculatorPage() {
     });
   }
 
+  function trackGuideClick(destination: string) {
+    trackEvent("guide_cta_clicked", {
+      destination,
+      page: "solar-savings-calculator",
+    });
+  }
+
   function trackAffiliateClick(category: string, destination: string) {
     trackEvent("affiliate_product_clicked", {
       category,
@@ -217,8 +225,13 @@ export default function SolarSavingsCalculatorPage() {
 
   return (
     <main className="min-h-screen bg-slate-950 text-white">
+      <Script src="https://payhip.com/payhip.js" strategy="afterInteractive" />
+
       <section className="mx-auto max-w-6xl px-6 py-16">
-        <a href="/" className="text-sm font-medium text-emerald-300 hover:text-emerald-200">
+        <a
+          href="/"
+          className="text-sm font-medium text-emerald-300 hover:text-emerald-200"
+        >
           ← Back to homepage
         </a>
 
@@ -467,6 +480,43 @@ export default function SolarSavingsCalculatorPage() {
                 </div>
               </div>
 
+              <div className="mt-8 rounded-3xl border border-emerald-400/20 bg-slate-950 p-6">
+                <p className="text-sm font-medium text-emerald-300">
+                  Free guide + premium buyer pack
+                </p>
+
+                <h2 className="mt-3 text-2xl font-bold">
+                  Before you choose an installer, download the guide
+                </h2>
+
+                <p className="mt-4 max-w-4xl leading-7 text-slate-300">
+                  Use the free SolarCal guide to understand your estimate,
+                  compare solar quotes, and avoid common buying mistakes. You
+                  can also upgrade to the full Buyer’s Pack for extra checklists
+                  and quote comparison help.
+                </p>
+
+                <div className="mt-6 flex flex-col gap-4 sm:flex-row">
+                  <a
+                    href="/free-solar-guide"
+                    onClick={() => trackGuideClick("free-solar-guide")}
+                    className="rounded-xl bg-emerald-400 px-6 py-4 text-center font-semibold text-slate-950 hover:bg-emerald-300"
+                  >
+                    Download the free guide
+                  </a>
+
+                  <a
+                    href="https://payhip.com/b/BMvmN"
+                    onClick={() => trackGuideClick("buyers-pack")}
+                    className="payhip-buy-button rounded-xl border border-white/15 px-6 py-4 text-center font-semibold text-white hover:bg-white/10"
+                    data-theme="green"
+                    data-product="BMvmN"
+                  >
+                    View the Buyer’s Pack
+                  </a>
+                </div>
+              </div>
+
               <div className="mt-8">
                 <h2 className="text-2xl font-bold">Other options to consider</h2>
                 <p className="mt-3 max-w-3xl leading-7 text-slate-300">
@@ -506,7 +556,9 @@ export default function SolarSavingsCalculatorPage() {
               </div>
 
               <div className="mt-8 rounded-2xl border border-white/10 bg-slate-950 p-5">
-                <h2 className="text-xl font-semibold">Important estimate note</h2>
+                <h2 className="text-xl font-semibold">
+                  Important estimate note
+                </h2>
                 <p className="mt-3 text-sm leading-6 text-slate-400">
                   Results are estimates only. They are not formal quotes,
                   guarantees, financial advice, or survey results. Final costs,
