@@ -25,6 +25,21 @@ export const affiliateLinks: Record<string, AffiliateLink> = {
     partner: "Pending solar quote partner",
   },
 
+  "blue-ape-renewables": {
+    label: "Solar installer partner",
+    title: "View Blue Ape Renewables",
+    description:
+      "This page sends visitors to Blue Ape Renewables for solar and renewable energy options.",
+    explanation:
+      "Blue Ape Renewables provides solar and renewable energy services. SolarCal may earn commission or referral income if visitors continue through this link.",
+    destinationUrl:
+      "https://blueaperenewables.co.uk/pages/blue-ape-landing-page?sca_ref=11276066.UzaTHVjluQZ&utm_source=11276066&utm_medium=promote&utm_campaign=m-a-raza",
+    buttonText: "Visit Blue Ape Renewables",
+    status: "active",
+    network: "Direct",
+    partner: "Blue Ape Renewables",
+  },
+
   "solar-products": {
     label: "Solar product partner",
     title: "View solar panels, kits, batteries, and off-grid products",
