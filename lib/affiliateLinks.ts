@@ -137,4 +137,18 @@ export const affiliateLinks: Record<string, AffiliateLink> = {
     network: "Amazon Associates UK",
     partner: "Amazon UK",
   },
+
+  "sunstore": {
+    label: "Solar product partner",
+    title: "View Sunstore solar products",
+    description:
+      "This page sends visitors to Sunstore for solar panels, batteries, inverters, off-grid solar products, and related solar equipment.",
+    explanation:
+      "Sunstore supplies solar panels, batteries, inverters, off-grid solar kits, and related renewable energy products. SolarCal may earn commission or referral income if visitors continue through this link.",
+    destinationUrl: "https://www.sunstore.co.uk/?aff=SolarCal",
+    buttonText: "View Sunstore products",
+    status: "active",
+    network: "Direct",
+    partner: "Sunstore Solar",
+  },
 };
