@@ -302,34 +302,6 @@ export default function BestSolarPanelsUKPage() {
             </div>
           </section>
 
-          <section className="mt-12 rounded-3xl border border-emerald-400/20 bg-emerald-400/10 p-6">
-            <h2 className="text-3xl font-bold">
-              Solar products and equipment
-            </h2>
-
-            <p className="mt-4 max-w-3xl leading-7 text-slate-300">
-              If you are researching panels, kits, batteries, inverters, or
-              off-grid solar equipment, you can also compare solar product
-              options through SolarCal’s partner route.
-            </p>
-
-            <div className="mt-6 flex flex-col gap-4 sm:flex-row">
-              <a
-                href="/go/solar-products"
-                className="rounded-xl bg-emerald-400 px-6 py-4 text-center font-semibold text-slate-950 hover:bg-emerald-300"
-              >
-                View solar products
-              </a>
-
-              <a
-                href="/affiliate-disclosure"
-                className="rounded-xl border border-white/15 px-6 py-4 text-center font-semibold text-white hover:bg-white/10"
-              >
-                Read affiliate disclosure
-              </a>
-            </div>
-          </section>
-
           <section className="mt-12 rounded-2xl border border-white/10 bg-slate-900 p-6">
             <h2 className="text-2xl font-bold">Sources and further reading</h2>
 
