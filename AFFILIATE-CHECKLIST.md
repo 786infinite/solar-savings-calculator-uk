@@ -44,4 +44,6 @@
 
 Do not add visible affiliate buttons for placeholder routes unless the page clearly explains the partner is pending.
 
+Bing may report /go/ routes as blocked by robots.txt. This is intentional because affiliate route pages should not be indexed.
+
 Avoid clutter. Only place affiliate buttons where they match the page topic.
