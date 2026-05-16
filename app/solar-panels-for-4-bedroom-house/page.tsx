@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import SiteShell from "@/components/SiteShell";
 import FaqSchema from "@/components/FaqSchema";
 export const metadata: Metadata = {
-  title: "Solar Panels for a 4-Bedroom House UK | SolarCal",
+  title: "Solar Panels for 4-Bed House UK | SolarCal",
   description:
     "Estimate solar panel system size, cost, savings, battery storage benefit, EV charging potential, and payback for a 4-bedroom house in the UK.",
 };

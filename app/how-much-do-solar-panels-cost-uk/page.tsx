@@ -3,7 +3,7 @@ import SiteShell from "@/components/SiteShell";
 import FaqSchema from "@/components/FaqSchema";
 
 export const metadata: Metadata = {
-  title: "How Much Do Solar Panels Cost in the UK? | SolarCal",
+  title: "Solar Panel Costs UK | SolarCal",
   description:
     "See estimated UK solar panel costs by system size, battery cost impact, quote factors, payback considerations, and use SolarCal to estimate solar savings.",
 };

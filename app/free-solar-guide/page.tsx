@@ -3,7 +3,7 @@ import Script from "next/script";
 import SiteShell from "@/components/SiteShell";
 
 export const metadata: Metadata = {
-  title: "Free UK Solar Savings Guide 2026 | SolarCal",
+  title: "Free UK Solar Guide 2026 | SolarCal",
   description:
     "Download the free UK Solar Savings Starter Guide 2026 and learn how to compare solar quotes, understand savings and avoid common buying mistakes.",
 };

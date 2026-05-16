@@ -3,7 +3,7 @@ import SiteShell from "@/components/SiteShell";
 import FaqSchema from "@/components/FaqSchema";
 
 export const metadata: Metadata = {
-  title: "How Long Do Solar Panels Take to Pay for Themselves? | SolarCal",
+  title: "Solar Panel Payback Time UK | SolarCal",
   description: "Understand solar panel payback in the UK, what affects payback time, installation cost, export income, self-consumption, batteries, and savings.",
 };
 

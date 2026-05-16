@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import SiteShell from "@/components/SiteShell";
 import FaqSchema from "@/components/FaqSchema";
 export const metadata: Metadata = {
-  title: "Is a Solar Battery Worth It in the UK? | SolarCal",
+  title: "Is a Solar Battery Worth It UK? | SolarCal",
   description:
     "Learn when solar battery storage may be worth it, what affects payback, battery cost, self-consumption, EV charging, and solar savings.",
 };

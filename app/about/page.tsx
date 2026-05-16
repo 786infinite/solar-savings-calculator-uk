@@ -2,7 +2,7 @@
 import SiteShell from "@/components/SiteShell";
 
 export const metadata: Metadata = {
-  title: "About SolarCal | UK Solar Savings Calculator",
+  title: "About SolarCal | SolarCal",
   description:
     "Learn about SolarCal, a UK-focused solar savings calculator and home energy guide website helping homeowners estimate solar costs, savings, payback, batteries, and EV charging.",
 };
