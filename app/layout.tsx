@@ -20,13 +20,15 @@ export const metadata: Metadata = {
     "EV charger cost calculator UK",
     "solar panels UK",
   ],
- verification: {
-   google: [
-     "G-izENxozElAETAL4YXWtDSvnFR__pavQRQRd2s-DPs",
-     "FvaF7FwMEaE42s-i8CZc_JB6m91F79ABRCspVociBNg",
-  ],
-},
-  
+  verification: {
+    google: [
+      "G-izENxozElAETAL4YXWtDSvnFR__pavQRQRd2s-DPs",
+      "FvaF7FwMEaE42s-i8CZc_JB6m91F79ABRCspVociBNg",
+    ],
+    other: {
+      "msvalidate.01": "48FAAB6E6D4E4BFECD387D4297F272C2",
+    },
+  },
   openGraph: {
     title: "Solar Savings Calculator UK",
     description:
@@ -77,6 +79,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationData) }}
         />
+
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-FL26Q4LFP4"
           strategy="afterInteractive"
