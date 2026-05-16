@@ -6,10 +6,10 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://solarcal.co.uk"),
-  title: {
-    default: "Solar Savings Calculator UK | Estimate Solar Panel Savings",
-    template: "%s | Solar Savings Calculator UK",
-  },
+ title: {
+  default: "SolarCal | Solar Savings Calculator UK",
+  template: "%s | SolarCal",
+},
   description:
     "Use the free Solar Savings Calculator UK to estimate solar panel installation cost, annual savings, payback period, battery benefit, EV charging benefit, and next steps.",
   keywords: [
