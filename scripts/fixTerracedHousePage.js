@@ -1,4 +1,14 @@
-import type { Metadata } from "next";
+const fs = require("fs");
+const path = require("path");
+
+const dir = path.join(process.cwd(), "app", "solar-panels-for-terraced-house");
+const file = path.join(dir, "page.tsx");
+
+if (!fs.existsSync(dir)) {
+  fs.mkdirSync(dir, { recursive: true });
+}
+
+const code = `import type { Metadata } from "next";
 import SiteShell from "@/components/SiteShell";
 
 export const metadata: Metadata = {
@@ -186,3 +196,7 @@ export default function SolarPanelsForTerracedHousePage() {
     </SiteShell>
   );
 }
+`;
+
+fs.writeFileSync(file, code, "utf8");
+console.log("Fixed terraced house page module.");
