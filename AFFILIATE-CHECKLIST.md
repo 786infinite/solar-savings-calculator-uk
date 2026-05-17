@@ -47,3 +47,18 @@ Do not add visible affiliate buttons for placeholder routes unless the page clea
 Bing may report /go/ routes as blocked by robots.txt. This is intentional because affiliate route pages should not be indexed.
 
 Avoid clutter. Only place affiliate buttons where they match the page topic.
+
+## Free guide and Buyer’s Pack wording
+
+Use the free guide as the soft first step:
+- Download the free guide
+- Understand savings, quote comparison, payback periods, battery storage, EV charging, and common buying mistakes
+
+Use the Buyer’s Pack as the paid upgrade:
+- View the Buyer’s Pack
+- Extra quote comparison help, installer questions, and buying checklists before choosing a supplier
+
+Avoid overpromising:
+- Do not say the guide guarantees savings
+- Do not say the Buyer’s Pack guarantees the best installer
+- Do not say any calculator result is a formal quote
