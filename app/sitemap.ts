@@ -19,6 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/solar-panel-grants-uk",
     "/how-long-do-solar-panels-take-to-pay-for-themselves",
     "/solar-panels-for-3-bedroom-house",
+    "/solar-panels-for-terraced-house",
     "/solar-panels-for-4-bedroom-house",
     "/solar-panels-with-battery-cost",
     "/solar-battery-worth-it",

@@ -165,6 +165,14 @@ export function FooterLinks() {
               </li>
               <li>
                 <a
+                  href="/solar-panels-for-terraced-house"
+                  className="hover:text-emerald-300"
+                >
+                  Terraced house solar
+                </a>
+              </li>
+              <li>
+                <a
                   href="/solar-panels-for-4-bedroom-house"
                   className="hover:text-emerald-300"
                 >

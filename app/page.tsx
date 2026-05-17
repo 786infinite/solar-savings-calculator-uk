@@ -30,6 +30,11 @@ const popularGuides = [
     description: "Estimate system size and savings for a typical 3-bed home.",
   },
   {
+    title: "Solar panels for a terraced house",
+    href: "/solar-panels-for-terraced-house",
+    description: "Check roof space, shading, access, savings, and quote points.",
+  },
+  {
     title: "Solar panels for a 4-bedroom house",
     href: "/solar-panels-for-4-bedroom-house",
     description: "Compare likely system needs for larger homes.",
