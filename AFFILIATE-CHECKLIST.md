@@ -62,3 +62,21 @@ Avoid overpromising:
 - Do not say the guide guarantees savings
 - Do not say the Buyer’s Pack guarantees the best installer
 - Do not say any calculator result is a formal quote
+
+## SEO content pages added
+
+Recent supporting pages:
+
+- /solar-panel-grants-uk
+- /south-facing-solar-panels-uk
+- /solar-panel-shading-uk
+- /mcs-certified-solar-installers-uk
+- /solar-panels-for-terraced-house
+
+These pages support the main calculator, free guide, Buyer’s Pack, and quote/product comparison pages.
+
+Search engine status:
+
+- Google sitemap: 28 pages discovered
+- Bing sitemap: 28 URLs discovered
+- Bing scan: only /go/ affiliate routes blocked by robots.txt, intentional
