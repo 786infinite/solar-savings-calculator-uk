@@ -44,6 +44,9 @@ export function HeaderLinks() {
           >
             Worth It?
           </a>
+          <a href="/solar-panel-grants-uk" className="hover:text-emerald-300">
+            Grants
+          </a>
           <a href="/solar-battery-worth-it" className="hover:text-emerald-300">
             Batteries
           </a>
@@ -134,6 +137,14 @@ export function FooterLinks() {
                   className="hover:text-emerald-300"
                 >
                   Are solar panels worth it?
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/solar-panel-grants-uk"
+                  className="hover:text-emerald-300"
+                >
+                  Solar panel grants
                 </a>
               </li>
               <li>
