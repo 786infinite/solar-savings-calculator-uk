@@ -37,6 +37,12 @@ const popularGuides = [
       "See how trees, chimneys, dormers, and shade affect solar output.",
   },
   {
+    title: "MCS certified solar installers",
+    href: "/mcs-certified-solar-installers-uk",
+    description:
+      "Learn what to check before choosing a UK solar installer.",
+  },
+  {
     title: "Solar panels for a 3-bedroom house",
     href: "/solar-panels-for-3-bedroom-house",
     description: "Estimate system size and savings for a typical 3-bed home.",

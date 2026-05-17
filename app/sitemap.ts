@@ -19,6 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/solar-panel-grants-uk",
     "/south-facing-solar-panels-uk",
     "/solar-panel-shading-uk",
+    "/mcs-certified-solar-installers-uk",
     "/how-long-do-solar-panels-take-to-pay-for-themselves",
     "/solar-panels-for-3-bedroom-house",
     "/solar-panels-for-terraced-house",
