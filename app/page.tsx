@@ -31,6 +31,12 @@ const popularGuides = [
       "Compare south, east-west, and shaded roof solar performance.",
   },
   {
+    title: "Solar panel shading UK",
+    href: "/solar-panel-shading-uk",
+    description:
+      "See how trees, chimneys, dormers, and shade affect solar output.",
+  },
+  {
     title: "Solar panels for a 3-bedroom house",
     href: "/solar-panels-for-3-bedroom-house",
     description: "Estimate system size and savings for a typical 3-bed home.",

@@ -157,6 +157,14 @@ export function FooterLinks() {
               </li>
               <li>
                 <a
+                  href="/solar-panel-shading-uk"
+                  className="hover:text-emerald-300"
+                >
+                  Solar panel shading
+                </a>
+              </li>
+              <li>
+                <a
                   href="/how-long-do-solar-panels-take-to-pay-for-themselves"
                   className="hover:text-emerald-300"
                 >
