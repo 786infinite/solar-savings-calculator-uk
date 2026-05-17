@@ -216,6 +216,13 @@ export default function AreSolarPanelsWorthItUKPage() {
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <a
+                href="/solar-panel-grants-uk"
+                className="rounded-xl border border-white/15 px-6 py-4 text-center font-semibold text-white hover:bg-white/10"
+              >
+                Check solar grants
+              </a>
+
+              <a
                 href="/solar-savings-calculator"
                 className="rounded-xl bg-emerald-400 px-6 py-4 text-center font-semibold text-slate-950 hover:bg-emerald-300"
               >
