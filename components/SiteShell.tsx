@@ -149,6 +149,14 @@ export function FooterLinks() {
               </li>
               <li>
                 <a
+                  href="/south-facing-solar-panels-uk"
+                  className="hover:text-emerald-300"
+                >
+                  South-facing solar panels
+                </a>
+              </li>
+              <li>
+                <a
                   href="/how-long-do-solar-panels-take-to-pay-for-themselves"
                   className="hover:text-emerald-300"
                 >

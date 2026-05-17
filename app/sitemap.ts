@@ -17,6 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/how-much-do-solar-panels-cost-uk",
     "/are-solar-panels-worth-it-uk",
     "/solar-panel-grants-uk",
+    "/south-facing-solar-panels-uk",
     "/how-long-do-solar-panels-take-to-pay-for-themselves",
     "/solar-panels-for-3-bedroom-house",
     "/solar-panels-for-terraced-house",

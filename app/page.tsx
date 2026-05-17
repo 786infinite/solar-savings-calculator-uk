@@ -25,6 +25,12 @@ const popularGuides = [
       "Check ECO4, 0% VAT, SEG payments, and other UK solar support.",
   },
   {
+    title: "South-facing solar panels",
+    href: "/south-facing-solar-panels-uk",
+    description:
+      "Compare south, east-west, and shaded roof solar performance.",
+  },
+  {
     title: "Solar panels for a 3-bedroom house",
     href: "/solar-panels-for-3-bedroom-house",
     description: "Estimate system size and savings for a typical 3-bed home.",
