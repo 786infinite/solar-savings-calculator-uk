@@ -19,6 +19,12 @@ const popularGuides = [
     description: "Understand when solar panels may make financial sense.",
   },
   {
+    title: "Solar panel grants UK",
+    href: "/solar-panel-grants-uk",
+    description:
+      "Check ECO4, 0% VAT, SEG payments, and other UK solar support.",
+  },
+  {
     title: "Solar panels for a 3-bedroom house",
     href: "/solar-panels-for-3-bedroom-house",
     description: "Estimate system size and savings for a typical 3-bed home.",
@@ -160,8 +166,8 @@ export default function HomePage() {
               </p>
               <h2 className="mt-3 text-3xl font-bold">Popular UK solar pages</h2>
               <p className="mt-4 max-w-3xl leading-7 text-slate-300">
-                Read simple guides about solar panel costs, payback, battery
-                storage, EV charging, and common home sizes.
+                Read simple guides about solar panel costs, grants, payback,
+                battery storage, EV charging, and common home sizes.
               </p>
             </div>
           </div>
